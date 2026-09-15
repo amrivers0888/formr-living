@@ -7,12 +7,15 @@ export function Header({ live }: { live: boolean }) {
   return (
     <header className="sticky top-0 z-30 border-b border-[var(--color-border)] bg-[var(--color-bg)]/70 backdrop-blur-xl">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-3.5">
-        <Link href="/" className="flex items-center gap-2.5">
-          <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-[var(--color-accent)]/15 text-[var(--color-accent)]">
-            <Hammer className="h-4.5 w-4.5" />
+        <Link href="/" className="flex items-center gap-3">
+          <span className="flex h-9 w-9 items-center justify-center rounded-full border border-[var(--color-border)] bg-[var(--color-accent)]/10 text-[var(--color-accent-strong)]">
+            <Hammer className="h-4 w-4" />
           </span>
-          <span className="font-display text-xl font-semibold tracking-tight">
-            Formr<span className="text-[var(--color-accent-strong)]"> Living</span>
+          <span className="flex flex-col leading-none">
+            <span className="font-display text-xl tracking-tight">
+              Formr<span className="text-[var(--color-accent-strong)]"> Living</span>
+            </span>
+            <span className="mt-1 hidden text-[0.6rem] uppercase tracking-[0.22em] text-[var(--color-muted)] sm:block">Home Renovation Studio</span>
           </span>
           <span
             className="ml-1 rounded-full px-2 py-0.5 text-[10px] font-medium uppercase tracking-wide"

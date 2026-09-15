@@ -2,12 +2,13 @@
 
 /* ---- Reno Hub — Modern English Cottage (light & airy sage) ---- */
 @theme {
-  --color-bg: #f4efe4;         /* warm cream */
-  --color-bg-soft: #eae3d3;
-  --color-panel: #fcfaf4;      /* soft ivory card */
-  --color-border: #e4dccb;     /* light linen */
-  --color-muted: #857f70;      /* stone */
-  --color-text: #2e2c26;       /* warm charcoal */
+  --color-bg: #f5f1e8;         /* clean warm cream */
+  --color-bg-soft: #ece5d6;
+  --color-panel: #fdfbf6;      /* soft ivory card */
+  --color-border: #e7e0d0;     /* hairline linen */
+  --color-muted: #8a8474;      /* stone */
+  --color-text: #262420;       /* warm charcoal */
+  --color-ink: #201f1a;        /* deep editorial ink */
   --color-accent: #7c8a6b;     /* sage */
   --color-accent-strong: #5f6e50; /* deep sage (buttons, headings) */
   --color-oak: #b08968;        /* natural oak */
@@ -38,19 +39,21 @@ body {
   min-height: 100vh;
 }
 
-.font-display { font-family: var(--font-display), Georgia, "Times New Roman", serif; letter-spacing: -0.01em; }
+.font-display { font-family: var(--font-display), Georgia, "Times New Roman", serif; letter-spacing: -0.015em; }
 
-/* Paper-like card */
+/* Editorial eyebrow label */
+.eyebrow { text-transform: uppercase; letter-spacing: 0.2em; font-size: 0.7rem; font-weight: 600; color: var(--color-muted); }
+
+/* Paper-like card — flat, editorial */
 .glass {
-  background: linear-gradient(180deg, #fdfbf6, #faf6ec);
+  background: var(--color-panel);
   border: 1px solid var(--color-border);
-  box-shadow: 0 1px 2px rgba(60, 50, 30, 0.04), 0 8px 24px -18px rgba(60, 50, 30, 0.25);
+  box-shadow: 0 1px 2px rgba(60, 50, 30, 0.03);
 }
-.glass-hover { transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease; }
+.glass-hover { transition: transform .22s ease, box-shadow .22s ease; }
 .glass-hover:hover {
-  transform: translateY(-3px);
-  border-color: color-mix(in srgb, var(--color-accent) 55%, transparent);
-  box-shadow: 0 16px 40px -20px rgba(60, 50, 30, 0.35);
+  transform: translateY(-2px);
+  box-shadow: 0 22px 48px -28px rgba(40, 34, 20, 0.45);
 }
 
 /* Thin scrollbars */

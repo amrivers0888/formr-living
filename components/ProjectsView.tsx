@@ -5,7 +5,7 @@ import type { ProjectWithTotals } from "@/lib/data";
 import { PROJECT_STATUSES, currency, statusColor } from "@/lib/format";
 import { ProjectCard } from "./ProjectCard";
 
-export function ProjectsView({ projects }: { projects: ProjectWithTotals[] }) {
+export function ProjectsView({ projects, excludeId }: { projects: ProjectWithTotals[]; excludeId?: string }) {
   const [filter, setFilter] = useState<string>("All");
 
   const stats = useMemo(() => {
@@ -21,7 +21,7 @@ export function ProjectsView({ projects }: { projects: ProjectWithTotals[] }) {
     return map;
   }, [projects]);
 
-  const shown = filter === "All" ? projects : projects.filter((p) => p.status === filter);
+  const shown = (filter === "All" ? projects : projects.filter((p) => p.status === filter)).filter((p) => p.id !== excludeId);
 
   return (
     <div className="space-y-8">
@@ -57,9 +57,9 @@ export function ProjectsView({ projects }: { projects: ProjectWithTotals[] }) {
 
 function Stat({ label, value, accent }: { label: string; value: string; accent?: boolean }) {
   return (
-    <div className="glass rounded-2xl p-4">
-      <div className="text-xs uppercase tracking-wide text-[var(--color-muted)]">{label}</div>
-      <div className={`mt-1 font-display text-2xl font-semibold ${accent ? "text-[var(--color-accent-strong)]" : ""}`}>{value}</div>
+    <div className="glass rounded-2xl px-4 py-4">
+      <div className="eyebrow">{label}</div>
+      <div className={`mt-1.5 font-display text-3xl tracking-tight ${accent ? "text-[var(--color-accent-strong)]" : ""}`}>{value}</div>
     </div>
   );
 }
