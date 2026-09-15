@@ -31,7 +31,7 @@ const pantry: ProjectDetail = {
     materials_status: "Sourcing",
     build_plan_status: "Not Started",
     percent_complete: 5,
-    cover_image: IMG.pantry,
+    cover_image: "/mockups/pantry-cabinet.png",
     what: "A floor-to-ceiling, furniture-quality custom built-in for an existing pantry niche (~39.5\" W × 108\" H), approximately 24\" deep. Bottom: two stacked drawers. Middle: a walnut appliance surface at counter height. Lower upper: toaster oven hidden behind two walnut doors. Upper: pantry shelving behind two walnut doors. Four upper doors total.",
     why: "Turn an awkward pantry niche into a statement built-in that hides the toaster oven and adds real storage.",
     design_goal: "Custom furniture-like built-in — traditional frame-and-panel / inset cabinetry.",
@@ -76,8 +76,9 @@ const pantry: ProjectDetail = {
     { id: "c3", project_id: PANTRY_ID, component: "Door floating panel", part_no: "D2", material: "1/4\" Walnut Ply", quantity: 4, length: null, width: null, depth: null, cut_status: "NOT FINAL", final: false, notes: "4 doors." },
   ],
   files: [
-    { id: "f1", project_id: PANTRY_ID, name: "Walnut inset reference", type: "Inspiration", url: IMG.walnut },
-    { id: "f2", project_id: PANTRY_ID, name: "Grain / finish reference", type: "Inspiration", url: IMG.wood },
+    { id: "f1", project_id: PANTRY_ID, name: "Cabinet mockup", type: "Rendering", url: "/mockups/pantry-cabinet.png" },
+    { id: "f2", project_id: PANTRY_ID, name: "Mockup with dimensions", type: "Rendering", url: "/mockups/pantry-dimensions.png" },
+    { id: "f3", project_id: PANTRY_ID, name: "Build plan mockup", type: "Cut Diagram", url: "/mockups/pantry-build-plan.png" },
   ],
 };
 
