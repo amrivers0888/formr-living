@@ -12,7 +12,7 @@ export function BudgetBar({ spent, budget, compact = false }: { spent: number; b
         <span>{currency(spent)} spent</span>
         <span>{hasBudget ? `of ${currency(budget)}` : "no budget set"}</span>
       </div>
-      <div className="mt-1.5 h-2 w-full overflow-hidden rounded-full bg-white/8">
+      <div className="mt-1.5 h-2 w-full overflow-hidden rounded-full bg-black/[0.06]">
         <div className="h-full rounded-full transition-all" style={{ width: `${hasBudget ? pct : 0}%`, background: color }} />
       </div>
       {over && <div className="mt-1 text-xs font-medium text-red-400">Over budget</div>}

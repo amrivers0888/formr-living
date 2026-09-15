@@ -54,7 +54,7 @@ export function ChatDock({ live, projectId, projectName }: { live: boolean; proj
       {!open && (
         <button
           onClick={() => setOpen(true)}
-          className="fixed bottom-5 right-5 z-40 flex items-center gap-2 rounded-full bg-[var(--color-accent)] px-4 py-3 font-semibold text-black shadow-lg shadow-black/40 transition-transform hover:scale-105"
+          className="fixed bottom-5 right-5 z-40 flex items-center gap-2 rounded-full bg-[var(--color-accent-strong)] px-4 py-3 font-semibold text-white shadow-lg shadow-black/20 transition-transform hover:scale-105"
         >
           <Sparkles className="h-5 w-5" />
           <span className="hidden sm:inline">Assistant</span>
@@ -76,16 +76,16 @@ export function ChatDock({ live, projectId, projectName }: { live: boolean; proj
 
           <div className="flex-1 space-y-3 overflow-y-auto px-4 py-4">
             {messages.length === 0 && (
-              <div className="rounded-xl border border-[var(--color-border)] bg-white/[0.02] p-3 text-sm text-[var(--color-muted)]">
+              <div className="rounded-xl border border-[var(--color-border)] bg-[var(--color-accent-soft)]/60 p-3 text-sm text-[var(--color-muted)]">
                 {greeting}
               </div>
             )}
             {messages.map((m, i) => (
               <div key={i} className={m.role === "user" ? "flex justify-end" : ""}>
-                <div className={`max-w-[85%] whitespace-pre-wrap rounded-2xl px-3.5 py-2.5 text-sm ${m.role === "user" ? "bg-[var(--color-accent)] text-black" : "bg-white/[0.04] text-[var(--color-text)]"}`}>
+                <div className={`max-w-[85%] whitespace-pre-wrap rounded-2xl px-3.5 py-2.5 text-sm ${m.role === "user" ? "bg-[var(--color-accent-strong)] text-white" : "bg-[var(--color-accent-soft)] text-[var(--color-text)]"}`}>
                   {m.content}
                   {m.actions && m.actions.length > 0 && (
-                    <ul className="mt-2 space-y-1 border-t border-white/10 pt-2 text-xs text-[var(--color-muted)]">
+                    <ul className="mt-2 space-y-1 border-t border-black/10 pt-2 text-xs text-[var(--color-muted)]">
                       {m.actions.map((a, j) => (
                         <li key={j} className="flex items-start gap-1.5">
                           <CheckCircle2 className="mt-0.5 h-3 w-3 shrink-0 text-emerald-400" />
@@ -95,7 +95,7 @@ export function ChatDock({ live, projectId, projectName }: { live: boolean; proj
                     </ul>
                   )}
                   {m.createdProjectId && (
-                    <a href={`/projects/${m.createdProjectId}`} className="mt-2 inline-block text-xs font-medium text-[var(--color-accent)] underline">
+                    <a href={`/projects/${m.createdProjectId}`} className="mt-2 inline-block text-xs font-medium text-[var(--color-accent-strong)] underline">
                       Open the new project →
                     </a>
                   )}
@@ -123,7 +123,7 @@ export function ChatDock({ live, projectId, projectName }: { live: boolean; proj
               <button
                 onClick={send}
                 disabled={busy || !input.trim()}
-                className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[var(--color-accent)] text-black disabled:opacity-40"
+                className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[var(--color-accent-strong)] text-white disabled:opacity-40"
               >
                 <Send className="h-4 w-4" />
               </button>

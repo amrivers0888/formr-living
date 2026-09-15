@@ -31,7 +31,7 @@ export default function LoginPage() {
           <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-[var(--color-accent)]/15 text-[var(--color-accent)]">
             <Hammer className="h-5 w-5" />
           </span>
-          <span className="text-xl font-semibold">Reno<span className="text-[var(--color-accent)]">Hub</span></span>
+          <span className="font-display text-2xl font-semibold">Reno<span className="text-[var(--color-accent-strong)]">Hub</span></span>
         </div>
         <label className="mb-1.5 block text-sm text-[var(--color-muted)]">Enter your password</label>
         <div className="flex items-center gap-2 rounded-xl border border-[var(--color-border)] bg-[var(--color-bg)] px-3">
@@ -49,7 +49,7 @@ export default function LoginPage() {
         <button
           type="submit"
           disabled={busy}
-          className="mt-4 w-full rounded-xl bg-[var(--color-accent)] py-2.5 font-semibold text-black disabled:opacity-50"
+          className="mt-4 w-full rounded-xl bg-[var(--color-accent-strong)] py-2.5 font-semibold text-white disabled:opacity-50"
         >
           {busy ? "Checking…" : "Enter"}
         </button>

@@ -35,7 +35,7 @@ export function ProjectsView({ projects }: { projects: ProjectWithTotals[] }) {
 
       {/* Filter chips */}
       <div className="no-scrollbar flex gap-2 overflow-x-auto pb-1">
-        <Chip label={`All (${projects.length})`} active={filter === "All"} onClick={() => setFilter("All")} color="var(--color-accent)" />
+        <Chip label={`All (${projects.length})`} active={filter === "All"} onClick={() => setFilter("All")} color="var(--color-accent-strong)" />
         {PROJECT_STATUSES.filter((s) => counts[s]).map((s) => (
           <Chip key={s} label={`${s} (${counts[s]})`} active={filter === s} onClick={() => setFilter(s)} color={statusColor(s)} />
         ))}
@@ -59,7 +59,7 @@ function Stat({ label, value, accent }: { label: string; value: string; accent?:
   return (
     <div className="glass rounded-2xl p-4">
       <div className="text-xs uppercase tracking-wide text-[var(--color-muted)]">{label}</div>
-      <div className={`mt-1 text-2xl font-semibold ${accent ? "text-[var(--color-accent)]" : ""}`}>{value}</div>
+      <div className={`mt-1 font-display text-2xl font-semibold ${accent ? "text-[var(--color-accent-strong)]" : ""}`}>{value}</div>
     </div>
   );
 }

@@ -14,7 +14,7 @@ export default async function Home() {
       <Header live={live} />
       <main className="mx-auto max-w-6xl px-5 py-8">
         <div className="mb-8">
-          <h1 className="text-2xl font-semibold tracking-tight sm:text-3xl">Home Renovation Hub</h1>
+          <h1 className="font-display text-3xl font-semibold tracking-tight sm:text-4xl">Home Renovation Hub</h1>
           <p className="mt-1 text-[var(--color-muted)]">
             Every project, plan, measurement, and dollar — in one place. Tap a project to open its binder, or ask the assistant to start a new one.
           </p>

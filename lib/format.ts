@@ -26,49 +26,58 @@ export const PROJECT_STATUSES: ProjectStatus[] = [
   "Completed",
 ];
 
+// Muted, earthy tones tuned for contrast on the warm cream background.
+const RED = "#b5473c";
+const CLAY = "#c2703a";
+const BLUE = "#4e7db0";
+const GOLD = "#b07d1e";
+const GREEN = "#5e8f63";
+const PINK = "#b0658a";
+const STONE = "#857f70";
+
 export function orderStatusColor(s: OrderStatus | null): string {
   switch (s) {
-    case "NEED TO BUY": return "#f87171";
-    case "READY TO ORDER": return "#fb923c";
-    case "ORDERED": return "#60a5fa";
-    case "PARTIALLY RECEIVED": return "#fbbf24";
-    case "RECEIVED": return "#34d399";
+    case "NEED TO BUY": return RED;
+    case "READY TO ORDER": return CLAY;
+    case "ORDERED": return BLUE;
+    case "PARTIALLY RECEIVED": return GOLD;
+    case "RECEIVED": return GREEN;
     case "RETURNING":
-    case "RETURNED": return "#f472b6";
-    case "CANCELLED": return "#6b7280";
-    default: return "#9a9aa8";
+    case "RETURNED": return PINK;
+    case "CANCELLED": return STONE;
+    default: return STONE;
   }
 }
 
 export function measurementColor(s: MeasurementStatus | null): string {
   switch (s) {
-    case "ROUGH": return "#f87171";
-    case "ESTIMATED": return "#fb923c";
-    case "FIELD VERIFIED": return "#60a5fa";
-    case "FINAL": return "#34d399";
-    default: return "#9a9aa8";
+    case "ROUGH": return RED;
+    case "ESTIMATED": return CLAY;
+    case "FIELD VERIFIED": return BLUE;
+    case "FINAL": return GREEN;
+    default: return STONE;
   }
 }
 
 export function cutColor(s: CutStatus | null): string {
   switch (s) {
-    case "NOT FINAL": return "#f87171";
-    case "READY TO CUT": return "#fb923c";
-    case "CUT": return "#60a5fa";
-    case "TEST FIT": return "#fbbf24";
-    case "INSTALLED": return "#34d399";
-    default: return "#9a9aa8";
+    case "NOT FINAL": return RED;
+    case "READY TO CUT": return CLAY;
+    case "CUT": return BLUE;
+    case "TEST FIT": return GOLD;
+    case "INSTALLED": return GREEN;
+    default: return STONE;
   }
 }
 
 export function stepColor(s: StepStatus | null): string {
   switch (s) {
-    case "NOT STARTED": return "#9a9aa8";
-    case "READY": return "#60a5fa";
-    case "IN PROGRESS": return "#fbbf24";
-    case "BLOCKED": return "#f87171";
-    case "COMPLETE": return "#34d399";
-    default: return "#9a9aa8";
+    case "NOT STARTED": return STONE;
+    case "READY": return BLUE;
+    case "IN PROGRESS": return GOLD;
+    case "BLOCKED": return RED;
+    case "COMPLETE": return GREEN;
+    default: return STONE;
   }
 }
 

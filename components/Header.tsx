@@ -11,8 +11,8 @@ export function Header({ live }: { live: boolean }) {
           <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-[var(--color-accent)]/15 text-[var(--color-accent)]">
             <Hammer className="h-4.5 w-4.5" />
           </span>
-          <span className="text-lg font-semibold tracking-tight">
-            Reno<span className="text-[var(--color-accent)]">Hub</span>
+          <span className="font-display text-xl font-semibold tracking-tight">
+            Reno<span className="text-[var(--color-accent-strong)]">Hub</span>
           </span>
           <span
             className="ml-1 rounded-full px-2 py-0.5 text-[10px] font-medium uppercase tracking-wide"
@@ -28,7 +28,7 @@ export function Header({ live }: { live: boolean }) {
 
         <button
           onClick={() => window.dispatchEvent(new CustomEvent("reno:open-chat"))}
-          className="flex items-center gap-1.5 rounded-full bg-[var(--color-accent)] px-4 py-2 text-sm font-semibold text-black transition-transform hover:scale-[1.03]"
+          className="flex items-center gap-1.5 rounded-full bg-[var(--color-accent-strong)] px-4 py-2 text-sm font-semibold text-white transition-transform hover:scale-[1.03]"
         >
           <Plus className="h-4 w-4" />
           New Project

@@ -4,6 +4,7 @@ import { ArrowLeft, Ruler, ListChecks, ShoppingCart, Scissors, Hammer, Lightbulb
 import { getProjectDetail, hasSupabase } from "@/lib/data";
 import { estMaterialCost, actualSpend } from "@/lib/types";
 import { Header } from "@/components/Header";
+import { HeroImage } from "@/components/HeroImage";
 import { ChatDock } from "@/components/ChatDock";
 import { SectionCard, Empty } from "@/components/SectionCard";
 import { Gallery } from "@/components/Gallery";
@@ -39,13 +40,8 @@ export default async function ProjectPage({ params }: PageProps<"/projects/[id]"
 
       {/* Hero */}
       <div className="relative h-64 w-full overflow-hidden sm:h-80">
-        {project.cover_image ? (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img src={project.cover_image} alt="" className="h-full w-full object-cover" />
-        ) : (
-          <div className="h-full w-full bg-gradient-to-br from-[var(--color-accent-soft)] to-[var(--color-panel)]" />
-        )}
-        <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-bg)] via-[var(--color-bg)]/40 to-transparent" />
+        <HeroImage cover={project.cover_image} projectId={project.id} />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[var(--color-bg)] via-[var(--color-bg)]/40 to-transparent" />
         <div className="absolute inset-x-0 top-0 mx-auto flex max-w-6xl px-5 py-4">
           <Link href="/" className="flex items-center gap-1.5 rounded-full bg-black/40 px-3 py-1.5 text-sm text-white backdrop-blur hover:bg-black/60">
             <ArrowLeft className="h-4 w-4" /> All projects
@@ -57,7 +53,7 @@ export default async function ProjectPage({ params }: PageProps<"/projects/[id]"
             {project.priority && <span className="text-xs text-white/70">{project.priority} priority</span>}
             {project.current_phase && <span className="text-xs text-white/70">· {project.current_phase}</span>}
           </div>
-          <h1 className="text-2xl font-semibold text-white drop-shadow sm:text-4xl">{project.name}</h1>
+          <h1 className="font-display text-3xl font-semibold text-white drop-shadow sm:text-5xl">{project.name}</h1>
           {project.room && <p className="mt-1 text-white/70">{project.room}</p>}
         </div>
       </div>
@@ -66,7 +62,7 @@ export default async function ProjectPage({ params }: PageProps<"/projects/[id]"
         {/* Next action + snapshot */}
         <div className="grid gap-6 lg:grid-cols-3">
           <div className="glass rounded-[var(--radius-xl2)] p-5 lg:col-span-2">
-            <div className="text-xs uppercase tracking-wide text-[var(--color-accent)]">Next action</div>
+            <div className="text-xs font-semibold uppercase tracking-wide text-[var(--color-accent-strong)]">Next action</div>
             <p className="mt-2 text-lg">{project.next_action || "No next action set."}</p>
           </div>
           <div className="glass rounded-[var(--radius-xl2)] p-5">
@@ -104,7 +100,7 @@ export default async function ProjectPage({ params }: PageProps<"/projects/[id]"
                 {decisionsList.map((d) => (
                   <li key={d.id} className="rounded-xl border border-[var(--color-border)] p-3">
                     <div className="font-medium">{d.topic}</div>
-                    {d.final_decision && <div className="mt-0.5 text-sm text-emerald-300/90">{d.final_decision}</div>}
+                    {d.final_decision && <div className="mt-0.5 text-sm font-medium text-[var(--color-status-done)]">{d.final_decision}</div>}
                     {d.reason && <div className="mt-1 text-xs text-[var(--color-muted)]">Why: {d.reason}</div>}
                     {d.original_idea && <div className="mt-1 text-xs text-[var(--color-muted)] line-through opacity-70">Was: {d.original_idea}</div>}
                   </li>
@@ -126,7 +122,7 @@ export default async function ProjectPage({ params }: PageProps<"/projects/[id]"
                       {q.impact && <span className="shrink-0 text-xs text-[var(--color-muted)]">{q.impact}</span>}
                     </div>
                     {q.options && <div className="mt-1 text-xs text-[var(--color-muted)]">{q.options}</div>}
-                    {q.recommendation && <div className="mt-1 text-xs text-[var(--color-accent)]">{q.recommendation}</div>}
+                    {q.recommendation && <div className="mt-1 text-xs text-[var(--color-accent-strong)]">{q.recommendation}</div>}
                   </li>
                 ))}
               </ul>
@@ -225,7 +221,7 @@ export default async function ProjectPage({ params }: PageProps<"/projects/[id]"
             <ol className="space-y-3">
               {steps.map((s) => (
                 <li key={s.id} className="flex gap-3 rounded-xl border border-[var(--color-border)] p-3">
-                  <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-white/5 text-sm font-semibold text-[var(--color-muted)]">
+                  <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[var(--color-accent-soft)] text-sm font-semibold text-[var(--color-accent-strong)]">
                     {s.step_no ?? "•"}
                   </div>
                   <div className="min-w-0 flex-1">

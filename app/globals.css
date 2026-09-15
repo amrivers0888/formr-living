@@ -1,57 +1,62 @@
 @import "tailwindcss";
 
-/* ---- Reno Hub design system (dark, glassy, warm walnut accent) ---- */
+/* ---- Reno Hub — Modern English Cottage (light & airy sage) ---- */
 @theme {
-  --color-bg: #0b0b0f;
-  --color-bg-soft: #121218;
-  --color-panel: #16161d;
-  --color-border: #26262f;
-  --color-muted: #9a9aa8;
-  --color-text: #ececf1;
-  --color-accent: #d8a24a;
-  --color-accent-soft: #3a2c14;
+  --color-bg: #f4efe4;         /* warm cream */
+  --color-bg-soft: #eae3d3;
+  --color-panel: #fcfaf4;      /* soft ivory card */
+  --color-border: #e4dccb;     /* light linen */
+  --color-muted: #857f70;      /* stone */
+  --color-text: #2e2c26;       /* warm charcoal */
+  --color-accent: #7c8a6b;     /* sage */
+  --color-accent-strong: #5f6e50; /* deep sage (buttons, headings) */
+  --color-oak: #b08968;        /* natural oak */
+  --color-accent-soft: #e7ece0; /* pale sage tint */
 
-  --color-status-planning: #a78bfa;
-  --color-status-ready: #60a5fa;
-  --color-status-progress: #fbbf24;
-  --color-status-waiting: #fb923c;
-  --color-status-hold: #94a3b8;
-  --color-status-done: #34d399;
+  --color-status-planning: #8b6fb0;
+  --color-status-ready: #4e7db0;
+  --color-status-progress: #c08a2e;
+  --color-status-waiting: #c2703a;
+  --color-status-hold: #7c8592;
+  --color-status-done: #5e8f63;
 
   --radius-xl2: 1.25rem;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-fraunces);
 }
 
-html { color-scheme: dark; }
+html { color-scheme: light; }
 
 body {
   background:
-    radial-gradient(1100px 600px at 85% -10%, rgba(216, 162, 74, 0.10), transparent 60%),
-    radial-gradient(900px 500px at 0% 0%, rgba(120, 90, 200, 0.08), transparent 55%),
+    radial-gradient(1100px 620px at 85% -10%, rgba(124, 138, 107, 0.14), transparent 60%),
+    radial-gradient(900px 520px at 0% 0%, rgba(176, 137, 104, 0.12), transparent 55%),
     var(--color-bg);
   color: var(--color-text);
   font-family: var(--font-sans), system-ui, sans-serif;
   min-height: 100vh;
 }
 
-/* Glassy card */
+.font-display { font-family: var(--font-display), Georgia, "Times New Roman", serif; letter-spacing: -0.01em; }
+
+/* Paper-like card */
 .glass {
-  background: linear-gradient(180deg, rgba(255,255,255,0.045), rgba(255,255,255,0.02));
+  background: linear-gradient(180deg, #fdfbf6, #faf6ec);
   border: 1px solid var(--color-border);
-  backdrop-filter: blur(12px);
+  box-shadow: 0 1px 2px rgba(60, 50, 30, 0.04), 0 8px 24px -18px rgba(60, 50, 30, 0.25);
 }
 .glass-hover { transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease; }
 .glass-hover:hover {
   transform: translateY(-3px);
-  border-color: rgba(216, 162, 74, 0.45);
-  box-shadow: 0 12px 40px -12px rgba(0,0,0,0.6);
+  border-color: color-mix(in srgb, var(--color-accent) 55%, transparent);
+  box-shadow: 0 16px 40px -20px rgba(60, 50, 30, 0.35);
 }
 
 /* Thin scrollbars */
-* { scrollbar-width: thin; scrollbar-color: #33333d transparent; }
+* { scrollbar-width: thin; scrollbar-color: #d8cfbd transparent; }
 ::-webkit-scrollbar { width: 8px; height: 8px; }
-::-webkit-scrollbar-thumb { background: #33333d; border-radius: 999px; }
+::-webkit-scrollbar-thumb { background: #d8cfbd; border-radius: 999px; }
 
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
