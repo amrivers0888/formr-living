@@ -12,7 +12,7 @@ export function Header({ live }: { live: boolean }) {
             <Hammer className="h-4.5 w-4.5" />
           </span>
           <span className="font-display text-xl font-semibold tracking-tight">
-            Reno<span className="text-[var(--color-accent-strong)]">Hub</span>
+            Formr<span className="text-[var(--color-accent-strong)]"> Living</span>
           </span>
           <span
             className="ml-1 rounded-full px-2 py-0.5 text-[10px] font-medium uppercase tracking-wide"

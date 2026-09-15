@@ -7,7 +7,7 @@ export const dynamic = "force-dynamic";
 
 const MODEL = process.env.OPENAI_MODEL || "gpt-4o";
 
-const SYSTEM = `You are the assistant inside "Reno Hub", a personal DIY home-renovation app for Allison.
+const SYSTEM = `You are the assistant inside "Formr Living", a personal DIY home-renovation app for Allison.
 You help her create and build out renovation projects (custom cabinetry, bathrooms, decks, basements, etc.).
 
 Behavior:

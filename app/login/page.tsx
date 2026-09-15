@@ -31,7 +31,7 @@ export default function LoginPage() {
           <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-[var(--color-accent)]/15 text-[var(--color-accent)]">
             <Hammer className="h-5 w-5" />
           </span>
-          <span className="font-display text-2xl font-semibold">Reno<span className="text-[var(--color-accent-strong)]">Hub</span></span>
+          <span className="font-display text-2xl font-semibold">Formr<span className="text-[var(--color-accent-strong)]"> Living</span></span>
         </div>
         <label className="mb-1.5 block text-sm text-[var(--color-muted)]">Enter your password</label>
         <div className="flex items-center gap-2 rounded-xl border border-[var(--color-border)] bg-[var(--color-bg)] px-3">

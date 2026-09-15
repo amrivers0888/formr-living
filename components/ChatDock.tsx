@@ -66,7 +66,7 @@ export function ChatDock({ live, projectId, projectName }: { live: boolean; proj
           <div className="flex items-center justify-between border-b border-[var(--color-border)] px-4 py-3">
             <div className="flex items-center gap-2">
               <Sparkles className="h-4 w-4 text-[var(--color-accent)]" />
-              <span className="font-semibold">Reno Assistant</span>
+              <span className="font-semibold">Formr Assistant</span>
               {!live && <span className="rounded-full bg-yellow-500/15 px-2 py-0.5 text-[10px] font-medium text-yellow-400">preview</span>}
             </div>
             <button onClick={() => setOpen(false)} className="rounded-lg p-1 text-[var(--color-muted)] hover:bg-white/5 hover:text-white">

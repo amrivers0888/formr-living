@@ -7,7 +7,7 @@ const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"]
 const fraunces = Fraunces({ variable: "--font-fraunces", subsets: ["latin"], weight: ["400", "500", "600"] });
 
 export const metadata: Metadata = {
-  title: "Reno Hub — Home Renovation Command Center",
+  title: "Formr Living — Home Renovation",
   description: "Plan, build, and track every DIY renovation project in one place.",
 };
 
