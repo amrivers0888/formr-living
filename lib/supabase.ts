@@ -20,6 +20,7 @@ export function getServerClient(): SupabaseClient | null {
   if (!client) {
     client = createClient(url as string, serviceKey as string, {
       auth: { persistSession: false, autoRefreshToken: false },
+      db: { schema: process.env.SUPABASE_SCHEMA || "formr" },
     });
   }
   return client;
