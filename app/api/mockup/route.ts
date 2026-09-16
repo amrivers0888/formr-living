@@ -1,12 +1,13 @@
-import OpenAI from "openai";
+import OpenAI, { toFile } from "openai";
 import { getProjectDetail } from "@/lib/data";
 import { getServerClient } from "@/lib/supabase";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
-const STYLE =
-  "Style: modern English cottage — warm and airy, soft natural daylight, sage green and warm cream tones, natural oak and walnut wood, brass / champagne-bronze hardware, tasteful, cozy, timeless. Photorealistic interior architectural visualization. No text, no watermark, no people.";
+const IMAGE_RE = /\.(png|jpe?g|webp|avif)(\?|$)/i;
+const COTTAGE =
+  "Style: modern English cottage — warm and airy, soft natural daylight, sage green and warm cream tones, natural oak and walnut wood, brass / champagne-bronze hardware, tasteful, cozy, timeless.";
 
 export async function POST(request: Request) {
   const apiKey = process.env.OPENAI_API_KEY;
@@ -21,29 +22,53 @@ export async function POST(request: Request) {
   if (!detail) return Response.json({ error: "Project not found." }, { status: 404 });
   const p = detail.project;
 
-  const prompt = [
-    `A photorealistic interior design mockup of "${p.name}"${p.room ? ` in a ${p.room}` : ""}.`,
-    p.what ? `What it is: ${p.what}` : "",
-    p.aesthetic ? `Materials & look: ${p.aesthetic}` : "",
-    extra,
-    STYLE,
-  ].filter(Boolean).join(" ");
+  // Gather user-provided reference images (exclude our own AI outputs).
+  const refUrls = detail.files
+    .filter((f) => f.url && IMAGE_RE.test(f.url) && f.name !== "AI mockup")
+    .map((f) => f.url as string)
+    .slice(0, 3);
 
   const openai = new OpenAI({ apiKey });
+  const size = "1536x1024"; // wide landscape — matches the hero/card framing
   let b64: string | undefined;
+
   try {
-    const img = await openai.images.generate({
-      model: process.env.OPENAI_IMAGE_MODEL || "gpt-image-1",
-      prompt,
-      size: "1536x1024",
-    });
-    b64 = img.data?.[0]?.b64_json;
+    if (refUrls.length > 0) {
+      // Image-to-image: stay faithful to the real uploaded design.
+      const files = await Promise.all(
+        refUrls.map(async (u, i) => {
+          const res = await fetch(u);
+          const buf = Buffer.from(await res.arrayBuffer());
+          return toFile(buf, `ref-${i}.png`, { type: "image/png" });
+        }),
+      );
+      const prompt = [
+        `Re-render this exact ${p.name.toLowerCase()} as one clean, photorealistic hero image for a design dashboard.`,
+        `Stay faithful to the reference image(s): keep the same layout, proportions, door/drawer configuration, and the real materials and colors${p.aesthetic ? ` (${p.aesthetic})` : ""}.`,
+        `Do NOT invent a different design. Improve only the lighting and composition into a wide, straight-on landscape shot with a tidy, styled setting.`,
+        extra,
+        "No text, no watermark, no people.",
+      ].filter(Boolean).join(" ");
+      const img = await openai.images.edit({ model: process.env.OPENAI_IMAGE_MODEL || "gpt-image-1", image: files, prompt, size });
+      b64 = img.data?.[0]?.b64_json;
+    } else {
+      // No reference: generate from the project description in the cottage style.
+      const prompt = [
+        `A photorealistic interior design mockup of "${p.name}"${p.room ? ` in a ${p.room}` : ""}.`,
+        p.what ? `What it is: ${p.what}` : "",
+        p.aesthetic ? `Materials & look: ${p.aesthetic}` : "",
+        extra,
+        COTTAGE,
+        "Photorealistic architectural visualization, wide straight-on landscape composition. No text, no watermark, no people.",
+      ].filter(Boolean).join(" ");
+      const img = await openai.images.generate({ model: process.env.OPENAI_IMAGE_MODEL || "gpt-image-1", prompt, size });
+      b64 = img.data?.[0]?.b64_json;
+    }
   } catch (e: any) {
     return Response.json({ error: `Image generation failed: ${e.message}` }, { status: 200 });
   }
   if (!b64) return Response.json({ error: "No image returned." }, { status: 200 });
 
-  // If the database is connected, store the image and save it as the cover.
   const db = getServerClient();
   if (db) {
     try {
@@ -54,12 +79,11 @@ export async function POST(request: Request) {
         const { data: pub } = db.storage.from("mockups").getPublicUrl(path);
         await db.from("projects").update({ cover_image: pub.publicUrl }).eq("id", projectId);
         await db.from("files").insert({ project_id: projectId, name: "AI mockup", type: "Rendering", url: pub.publicUrl });
-        return Response.json({ url: pub.publicUrl, saved: true });
+        return Response.json({ url: pub.publicUrl, saved: true, usedReferences: refUrls.length });
       }
     } catch {
-      /* fall through to ephemeral preview */
+      /* fall through */
     }
   }
-
-  return Response.json({ dataUrl: `data:image/png;base64,${b64}`, saved: false });
+  return Response.json({ dataUrl: `data:image/png;base64,${b64}`, saved: false, usedReferences: refUrls.length });
 }
