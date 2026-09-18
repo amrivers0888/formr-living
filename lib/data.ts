@@ -50,6 +50,15 @@ export async function getProjects(): Promise<Project[]> {
   return (data ?? []) as Project[];
 }
 
+/** Lightweight {id, name}[] for the nav dropdown. */
+export async function getProjectSummaries(): Promise<{ id: string; name: string }[]> {
+  const db = getServerClient();
+  if (!db) return SAMPLE_PROJECTS.map((p) => ({ id: p.id, name: p.name }));
+  const { data, error } = await db.from("projects").select("id, name").order("name", { ascending: true });
+  if (error) throw new Error(`Failed to load project summaries: ${error.message}`);
+  return (data ?? []) as { id: string; name: string }[];
+}
+
 export async function getProjectDetail(id: string): Promise<ProjectDetail | null> {
   const db = getServerClient();
   if (!db) return sampleDetail(id) ?? null;

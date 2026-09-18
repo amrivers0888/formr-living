@@ -12,13 +12,13 @@ export function SectionCard({
   children: ReactNode;
 }) {
   return (
-    <section className="glass rounded-[var(--radius-xl2)] p-5">
-      <div className="mb-4 flex items-center justify-between gap-3">
-        <h2 className="flex items-center gap-2 text-sm font-semibold uppercase tracking-wide text-[var(--color-muted)]">
+    <section className="border border-[var(--color-border)] bg-[var(--color-panel)] p-6 sm:p-7">
+      <div className="mb-5 flex items-center justify-between gap-3 border-b border-[var(--color-border)] pb-4">
+        <h2 className="flex items-center gap-2 text-[0.7rem] font-medium uppercase tracking-[0.22em] text-[var(--color-terra-deep)]">
           {icon}
           {title}
         </h2>
-        {accent}
+        {accent && <div className="text-xs text-[var(--color-muted)]">{accent}</div>}
       </div>
       {children}
     </section>

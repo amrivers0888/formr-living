@@ -1,0 +1,166 @@
+{
+  "notes": "Extracted from 16 Lowe's PDFs in ~/Downloads on 2026-09-18. Project labels are per Allison's red annotations on each PDF. All prices are unit prices; totals derive from qty * price. Returns marked RETURNED.",
+  "projects": [
+    { "name": "Basement Bathroom", "room": "Basement Bathroom", "type": "Bathroom" },
+    { "name": "Basement Ceiling", "room": "Basement", "type": "Ceiling" },
+    { "name": "Basement Door + Window Trim", "room": "Basement", "type": "Trim & Millwork" },
+    { "name": "Basement Drywall", "room": "Basement", "type": "Drywall" },
+    { "name": "Basement Framing", "room": "Basement", "type": "Framing" },
+    { "name": "Basement Paint", "room": "Basement", "type": "Painting" },
+    { "name": "Outdoor Sofa", "room": "Outdoor", "type": "Outdoor Furniture" },
+    { "name": "Household & Cleaning", "room": "House", "type": "Household" }
+  ],
+  "receipts": [
+    {
+      "txn": "204767549",
+      "date": "2026-09-13",
+      "store": "Lowe's — Fultondale",
+      "items": [
+        { "project": "Household & Cleaning",         "category": "Cleaning",        "item": "Pet Expert Spot Remover Deodorizing Foam 22-oz",       "sku": "746363",  "model": "019200832625", "qty": 1, "price": 7.48,  "status": "RECEIVED" },
+        { "project": "Basement Door + Window Trim",   "category": "Caulk",           "item": "Dynaflex Ultra 10.1-oz Window & Door White Latex Caulk", "sku": "876476",  "model": "18211",        "qty": 1, "price": 7.98,  "status": "RECEIVED" },
+        { "project": "Basement Bathroom",             "category": "Tools",           "item": "1-1/4-in PVC Cutter",                                  "sku": "2146973", "model": "58704",        "qty": 1, "price": 16.28, "status": "RECEIVED" },
+        { "project": "Basement Door + Window Trim",   "category": "Trim Board",      "item": "1-in x 3-in x 8-ft Primed S4S MDF Board",              "sku": "5949",    "model": "L5262138",     "qty": 1, "price": 9.08,  "status": "RECEIVED" },
+        { "project": "Basement Door + Window Trim",   "category": "Supplies",        "item": "2-Pack 2-in Plastic Disposable Putty Knife",           "sku": "5759259", "model": "34904-2PK",    "qty": 1, "price": 2.08,  "status": "RECEIVED" },
+        { "project": "Basement Door + Window Trim",   "category": "Filler",          "item": "Stainable 16-oz Natural Wood Filler",                  "sku": "164702",  "model": "42853000",     "qty": 1, "price": 14.98, "status": "RECEIVED" },
+        { "project": "Basement Door + Window Trim",   "category": "Trim Board",      "item": "1-in x 12-in x 8-ft Primed S4S MDF Board",             "sku": "9489",    "model": "L52621128",    "qty": 2, "price": 24.70, "status": "RETURNED" }
+      ]
+    },
+    {
+      "txn": "72828237",
+      "date": "2026-08-18",
+      "store": "Lowe's — Fultondale",
+      "items": [
+        { "project": "Basement Paint", "category": "Wall + Ceiling Primer", "item": "Pro Interior PVA Wall & Ceiling Primer (5-gallon)", "sku": "305013", "model": "007.0305013.008", "qty": 1, "price": 68.00, "status": "RECEIVED" }
+      ]
+    },
+    {
+      "txn": "969093736",
+      "date": "2026-08-11",
+      "store": "Lowe's — Fultondale",
+      "items": [
+        { "project": "Basement Ceiling", "category": "Joint Lines", "item": "1-in x 3-in x 8-ft Premium Furring Strip", "sku": "4512", "model": "04512", "qty": 5,  "price": 2.47, "status": "RECEIVED" },
+        { "project": "Basement Ceiling", "category": "Joint Lines", "item": "1-in x 3-in x 8-ft Premium Furring Strip", "sku": "4512", "model": "04512", "qty": 18, "price": 2.47, "status": "RETURNED" }
+      ]
+    },
+    {
+      "txn": "217092621",
+      "date": "2026-09-13",
+      "store": "Lowe's — Fultondale",
+      "items": [
+        { "project": "Basement Door + Window Trim", "category": "Trim Board", "item": "1-in x 8-in x 8-ft Primed S4S MDF Board", "sku": "6628", "model": "L5262188", "qty": 2, "price": 18.28, "status": "RECEIVED" }
+      ]
+    },
+    {
+      "txn": "741772486",
+      "date": "2026-09-11",
+      "store": "Lowe's — Fultondale",
+      "items": [
+        { "project": "Basement Bathroom",           "category": "Fixture",     "item": "Pro-flush Anti-Clog XL Trapway White Elongated Chair-Height 12-in Rough-In 1.28 GPF 2-piece Toilet", "sku": "6039305", "model": "MT-80217",       "qty": 1, "price": 99.00,  "status": "RECEIVED" },
+        { "project": "Basement Paint",              "category": "Ceiling",     "item": "2000 Flat Black Interior Paint + Primer (1-gallon)",                                                 "sku": "2468037", "model": "007.2468037.007", "qty": 1, "price": 23.98,  "status": "RECEIVED" },
+        { "project": "Basement Door + Window Trim", "category": "Trim Board",  "item": "1-in x 8-in x 8-ft Primed S4S MDF Board",                                                            "sku": "6628",    "model": "L5262188",       "qty": 7, "price": 18.28,  "status": "RECEIVED" }
+      ]
+    },
+    {
+      "txn": "51385173",
+      "date": "2026-09-01",
+      "store": "Lowe's — Fultondale",
+      "items": [
+        { "project": "Household & Cleaning",         "category": "Pet",        "item": "Scented Clumping Clay Cat Litter",       "sku": "3592518", "model": "007023011720", "qty": 1, "price": 12.48, "status": "RECEIVED" },
+        { "project": "Basement Door + Window Trim",  "category": "Trim Board", "item": "1-in x 6-in x 8-ft Primed S4S MDF Board","sku": "6305",    "model": "L5262168",     "qty": 6, "price": 11.68, "status": "RECEIVED" }
+      ]
+    },
+    {
+      "txn": "800736086",
+      "date": "2026-09-10",
+      "store": "Lowe's — Fultondale",
+      "items": [
+        { "project": "Basement Door + Window Trim", "category": "Trim Board", "item": "1-in x 4-in x 8-ft Primed S4S MDF Board",                                    "sku": "6093",    "model": "L5262148",       "qty": 3, "price": 7.98,  "status": "RECEIVED" },
+        { "project": "Basement Bathroom",           "category": "Hardware",   "item": "Polished Brass Toilet Hardware Kit",                                          "sku": "247824",  "model": "RB235151",       "qty": 1, "price": 4.78,  "status": "RECEIVED" },
+        { "project": "Basement Bathroom",           "category": "Tools",      "item": "3-Pack Cold Chisel Set",                                                      "sku": "1080940", "model": "IRHT82530",      "qty": 1, "price": 16.98, "status": "RECEIVED" },
+        { "project": "Basement Bathroom",           "category": "Plumbing",   "item": "Flexible Toilet Supply Line 3/8-in comp x 7/8-in FIP x 16-in Braided SS",     "sku": "751667",  "model": "7233-16-38-2-RB","qty": 1, "price": 7.38,  "status": "RECEIVED" },
+        { "project": "Basement Bathroom",           "category": "Hardware",   "item": "1/4-in x 1-3/4-in Concrete Screw Anchors, 8-Pack",                            "sku": "2741998", "model": "28175",          "qty": 1, "price": 7.98,  "status": "RECEIVED" },
+        { "project": "Basement Bathroom",           "category": "Plumbing",   "item": "1/2-in Push-to-Connect x 3/8-in Compression Brass Quarter-turn Angle Stop",   "sku": "5233284", "model": "UR23036ZC",      "qty": 1, "price": 13.58, "status": "RECEIVED" },
+        { "project": "Basement Bathroom",           "category": "Plumbing",   "item": "RELIABILT 4.9-in Brown Toilet Wax Ring",                                       "sku": "4839357", "model": "8093",           "qty": 1, "price": 2.48,  "status": "RECEIVED" },
+        { "project": "Basement Door + Window Trim", "category": "Trim Board", "item": "1-in x 3-in x 8-ft Primed S4S Spruce/Pine/Fir Softwood Board",                "sku": "785085",  "model": "L5184438",       "qty": 8, "price": 7.98,  "status": "RECEIVED" },
+        { "project": "Basement Bathroom",           "category": "Plumbing",   "item": "Level Fit Offset 3.958-in White PVC Anchor Flange",                            "sku": "1216649", "model": "436054",         "qty": 1, "price": 15.48, "status": "RECEIVED" }
+      ]
+    },
+    {
+      "txn": "263539428",
+      "date": "2026-09-05",
+      "store": "Lowe's — Fultondale",
+      "items": [
+        { "project": "Basement Door + Window Trim", "category": "Trim Board", "item": "1-in x 3-in x 8-ft Unfinished #2 Better S4S Whitewood Board", "sku": "935",     "model": "11241",           "qty": 1, "price": 6.97,  "status": "RECEIVED" },
+        { "project": "Basement Paint",              "category": "Supplies",   "item": "12-Pack 12-in Disposable Paint Tray Liner",                    "sku": "133383",  "model": "02061A",          "qty": 1, "price": 8.48,  "status": "RECEIVED" },
+        { "project": "Basement Paint",              "category": "Supplies",   "item": "2-Pack 6-in Flocked Smooth Mini Foam Paint Roller Cover",      "sku": "7217095", "model": "770650212",       "qty": 1, "price": 7.98,  "status": "RECEIVED" },
+        { "project": "Basement Paint",              "category": "Cabinets",   "item": "HGTV Home by Sherwin-Williams Cabinet & Furniture Satin Enamel Ultra Deep, HGSW6258 (1-gallon)", "sku": null, "model": "HGSW6258", "qty": 1, "price": 62.98, "status": "RECEIVED" },
+        { "project": "Basement Paint",              "category": "Supplies",   "item": "PRO Grade Precision Fine 220-Grit Sanding Sponge (1-in x 2.5-in)", "sku": "6014070", "model": "FSB220-PGP-1T", "qty": 1, "price": 5.98, "status": "RECEIVED", "note": "No red label on original — assigned to Basement Paint (supplies)." },
+        { "project": "Basement Paint",              "category": "Gym Walls",  "item": "Valspar Signature Eggshell Base C Interior Paint + Primer, HGSW6258 (1-gallon)", "sku": null, "model": "HGSW6258", "qty": 1, "price": 46.98, "status": "RECEIVED" },
+        { "project": "Basement Door + Window Trim", "category": "Trim Board", "item": "1-in x 2-in x 8-ft Unfinished #2 S4S Whitewood Board",         "sku": "1408",    "model": "P LPR 1.000 2.000","qty": 1, "price": 4.78,  "status": "RECEIVED" },
+        { "project": "Basement Paint",              "category": "Samples",    "item": "Base C Tintable Paint Sample (Half-pint)",                     "sku": "1185293", "model": "007.1185293.003", "qty": 3, "price": 6.98,  "status": "RECEIVED" }
+      ]
+    },
+    {
+      "txn": "381050948",
+      "date": "2026-08-15",
+      "store": "Lowe's — Fultondale",
+      "items": [
+        { "project": "Household & Cleaning", "category": "Cleaning", "item": "Hardwood Floor 'N More Microfiber Replacement Head", "sku": "800015", "model": "136940",     "qty": 1, "price": 9.98,  "status": "RECEIVED" },
+        { "project": "Basement Paint",       "category": "Supplies", "item": "12-Pack Polypropylene Shoe Covers (X-Large)",         "sku": "313347", "model": "04512/8FF", "qty": 1, "price": 11.98, "status": "RECEIVED" }
+      ]
+    },
+    {
+      "txn": "380584965",
+      "date": "2026-08-15",
+      "store": "Lowe's — Fultondale",
+      "items": [
+        { "project": "Basement Paint", "category": "Supplies", "item": "2-in Flat Chip Brush",                     "sku": "104023",  "model": "2200520",      "qty": 1, "price": 1.68,  "status": "RECEIVED" },
+        { "project": "Basement Paint", "category": "Supplies", "item": "Tyvek Adult Unisex White Long-Sleeve Coverall (M)", "sku": "1055429", "model": "143231-6LWS", "qty": 1, "price": 17.98, "status": "RECEIVED" }
+      ]
+    },
+    {
+      "txn": "356218913",
+      "date": "2026-08-01",
+      "store": "Lowe's — Fultondale",
+      "items": [
+        { "project": "Basement Ceiling", "category": "Joint Lines", "item": "2-in x 2-in x 8-ft Whitewood Furring Strip",   "sku": "4513", "model": "04513",   "qty": 2,  "price": 2.87, "status": "RECEIVED" },
+        { "project": "Basement Framing", "category": "Studs",       "item": "2-in x 4-in x 96-in Kiln-Dried Fir #2 Premium","sku": "7001", "model": "7288-96", "qty": 14, "price": 4.48, "status": "RECEIVED" }
+      ]
+    },
+    {
+      "txn": "72613240",
+      "date": "2026-08-18",
+      "store": "Lowe's — Fultondale",
+      "items": [
+        { "project": "Basement Paint", "category": "Wall + Ceiling Primer", "item": "Pro Interior PVA Wall & Ceiling Primer (5-gallon)", "sku": "305013", "model": "007.0305013.008", "qty": 1, "price": 68.00, "status": "RECEIVED" }
+      ]
+    },
+    {
+      "txn": "592530152",
+      "date": "2026-08-18",
+      "store": "Lowe's — Fultondale",
+      "items": [
+        { "project": "Basement Paint", "category": "Wall + Ceiling Primer", "item": "Pro Interior PVA Wall & Ceiling Primer (5-gallon)", "sku": "305013",  "model": "007.0305013.008", "qty": 1, "price": 68.00, "status": "RECEIVED" },
+        { "project": "Basement Paint", "category": "Supplies",              "item": "5-ft Wood Extension Pole",                         "sku": "1615047", "model": "WP5M",             "qty": 1, "price": 7.98,  "status": "RECEIVED" }
+      ]
+    },
+    {
+      "txn": "201744227262052238",
+      "date": "2026-08-15",
+      "store": "Lowe's — Fultondale",
+      "items": [
+        { "project": "Basement Drywall", "category": "Corner Bead", "item": "1.25-in x 9-ft Quicksilver Metal 90-Degree Corner Bead",              "sku": "11816",  "model": "00751361490152", "qty": 6, "price": 3.94, "status": "RETURNED", "note": "Net price after Category-level discount ($23.64/6)." },
+        { "project": "Basement Drywall", "category": "Compound",    "item": "Quick Set Lite 45-Minute 18-lb Powder Lightweight Drywall Joint Compound", "sku": "299315", "model": "50002561",     "qty": 8, "price": 11.77, "status": "RETURNED", "note": "Net price after Contractor Pk discount ($94.16/8)." },
+        { "project": "Basement Drywall", "category": "Joint Tape",  "item": "Paper Tape 2.09-in x 500-ft Solid Drywall Joint Tape",                "sku": "11752",  "model": "50002574",      "qty": 8, "price": 7.12, "status": "RETURNED", "note": "Net price after Category-level discount ($56.96/8)." }
+      ]
+    },
+    {
+      "txn": "573466650",
+      "date": "2026-08-14",
+      "store": "Lowe's — Homewood",
+      "items": [
+        { "project": "Outdoor Sofa", "category": "Stain", "item": "Valspar Neutral Base Semi-Transparent Exterior Wood Stain & Sealer, Rusticana (1-quart)", "sku": null, "model": "Rusticana", "qty": 1, "price": 21.98, "status": "RECEIVED" }
+      ]
+    }
+  ]
+}

@@ -1,43 +1,88 @@
 import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
 import type { Project } from "@/lib/types";
 import { statusColor, currency } from "@/lib/format";
 import { Pill } from "./StatusPill";
 
-export function ProjectCard({ project, spent }: { project: Project; spent: number }) {
+export function ProjectCard({
+  project,
+  spent,
+  index,
+}: {
+  project: Project;
+  spent: number;
+  index?: number;
+}) {
   const budget = project.estimated_budget;
   const pct = budget && budget > 0 ? Math.min(100, Math.round((spent / budget) * 100)) : 0;
 
   return (
     <Link href={`/projects/${project.id}`} className="group block">
-      <article className="glass glass-hover overflow-hidden rounded-[var(--radius-xl2)]">
-        <div className="relative h-56 w-full overflow-hidden">
+      <article className="card card-hover">
+        <div className="relative aspect-[4/3] w-full overflow-hidden bg-[var(--color-bg-alt)]">
           {project.cover_image ? (
             // eslint-disable-next-line @next/next/no-img-element
-            <img src={project.cover_image} alt="" className="h-full w-full object-cover transition-transform duration-[800ms] group-hover:scale-105" />
+            <img
+              src={project.cover_image}
+              alt=""
+              className="h-full w-full object-cover transition-transform duration-[900ms] group-hover:scale-[1.04]"
+            />
           ) : (
-            <div className="h-full w-full bg-gradient-to-br from-[var(--color-accent-soft)] to-[var(--color-bg-soft)]" />
+            <div className="relative flex h-full w-full items-center justify-center bg-[var(--color-bg-alt)]">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/brand/formr-house.png"
+                alt=""
+                className="h-[62%] w-auto opacity-40 transition-opacity duration-500 group-hover:opacity-60"
+              />
+            </div>
           )}
-          <div className="absolute left-3 top-3">
+          <div className="absolute right-3 top-3">
             <Pill label={project.status} color={statusColor(project.status)} />
           </div>
         </div>
 
-        <div className="p-5">
-          {project.room && <p className="eyebrow">{project.room}</p>}
-          <h3 className="mt-1.5 font-display text-xl leading-snug tracking-tight transition-colors group-hover:text-[var(--color-accent-strong)]">
+        <div className="p-6">
+          <div className="flex items-baseline justify-between">
+            {index != null ? (
+              <span className="eyebrow-num tabular-nums">{String(index + 1).padStart(2, "0")}.</span>
+            ) : (
+              <span className="eyebrow-num">·</span>
+            )}
+            <ArrowUpRight className="h-4 w-4 text-[var(--color-muted)] transition-all group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-[var(--color-terra)]" />
+          </div>
+
+          {project.room && (
+            <p className="mt-4 text-[0.7rem] uppercase tracking-[0.22em] text-[var(--color-terra-deep)]">
+              {project.room}
+            </p>
+          )}
+          <h3 className="mt-2 font-display text-[1.65rem] leading-[1.1] tracking-tight text-[var(--color-ink)] transition-colors group-hover:text-[var(--color-terra-deep)]">
             {project.name}
           </h3>
-          <p className="mt-2 line-clamp-2 min-h-[2.5rem] text-sm text-[var(--color-muted)]">
+          <p className="mt-3 line-clamp-2 min-h-[2.75rem] text-sm leading-relaxed text-[var(--color-muted)]">
             {project.next_action || "No next action set"}
           </p>
 
-          <div className="mt-4 border-t border-[var(--color-border)] pt-3">
-            <div className="flex items-center justify-between text-xs text-[var(--color-muted)]">
-              <span>{budget && budget > 0 ? `${currency(spent)} of ${currency(budget)}` : `${currency(spent)} spent`}</span>
-              {budget && budget > 0 && <span>{pct}%</span>}
+          <div className="mt-6 border-t border-[var(--color-border)] pt-4">
+            <div className="flex items-baseline justify-between text-xs text-[var(--color-muted)]">
+              <span>
+                {budget && budget > 0
+                  ? <><span className="text-[var(--color-ink)]">{currency(spent)}</span> of {currency(budget)}</>
+                  : <><span className="text-[var(--color-ink)]">{currency(spent)}</span> spent</>}
+              </span>
+              {budget && budget > 0 && (
+                <span className="tabular-nums text-[var(--color-ink)]">{pct}%</span>
+              )}
             </div>
-            <div className="mt-2 h-1 w-full overflow-hidden rounded-full bg-black/[0.06]">
-              <div className="h-full rounded-full" style={{ width: `${pct}%`, background: pct > 100 ? "#b5473c" : "var(--color-accent)" }} />
+            <div className="mt-3 h-px w-full bg-[var(--color-border)]">
+              <div
+                className="h-px"
+                style={{
+                  width: `${pct}%`,
+                  background: pct > 100 ? "#b5473c" : "var(--color-terra)",
+                }}
+              />
             </div>
           </div>
         </div>

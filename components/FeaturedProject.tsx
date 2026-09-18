@@ -1,46 +1,59 @@
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import type { ProjectWithTotals } from "@/lib/data";
 import { statusColor, currency } from "@/lib/format";
 import { Pill } from "./StatusPill";
 
+/** Editorial split: photograph on the left, project meta card on the right. */
 export function FeaturedProject({ project }: { project: ProjectWithTotals }) {
   return (
-    <Link href={`/projects/${project.id}`} className="group relative block overflow-hidden rounded-[var(--radius-xl2)] border border-[var(--color-border)]">
-      <div className="relative h-[26rem] w-full sm:h-[30rem]">
-        {project.cover_image ? (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img src={project.cover_image} alt="" className="h-full w-full object-cover transition-transform duration-[900ms] group-hover:scale-105" />
-        ) : (
-          <div className="h-full w-full bg-gradient-to-br from-[var(--color-accent-soft)] to-[var(--color-bg-soft)]" />
-        )}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-black/5" />
-      </div>
-
-      <div className="absolute inset-x-0 bottom-0 p-6 sm:p-10">
-        <div className="max-w-2xl">
-          <div className="mb-3 flex items-center gap-3">
-            <span className="eyebrow text-white/80">Featured project</span>
-            {project.room && <span className="text-white/50">·</span>}
-            {project.room && <span className="eyebrow text-white/70">{project.room}</span>}
-          </div>
-          <h2 className="font-display text-3xl leading-tight text-white sm:text-5xl">{project.name}</h2>
-          {project.next_action && (
-            <p className="mt-3 max-w-xl text-sm text-white/85 sm:text-base">
-              <span className="text-[var(--color-accent)]">Next:</span> {project.next_action}
-            </p>
-          )}
-          <div className="mt-5 flex flex-wrap items-center gap-4">
-            <span className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-[var(--color-ink)] transition-transform group-hover:translate-x-0.5">
-              Open project <ArrowRight className="h-4 w-4" />
-            </span>
-            <Pill label={project.status} color={statusColor(project.status)} />
-            {project.estimated_budget != null && (
-              <span className="text-sm text-white/70">{currency(project.spent)} of {currency(project.estimated_budget)}</span>
+    <Link href={`/projects/${project.id}`} className="group block">
+      <article className="grid grid-cols-1 gap-6 lg:grid-cols-12 lg:gap-10">
+        <div className="lg:col-span-5">
+          <div className="flex aspect-[3/4] w-full items-center justify-center overflow-hidden border border-[var(--color-border)] bg-[var(--color-bg-alt)] p-6 sm:p-8">
+            {project.cover_image ? (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                src={project.cover_image}
+                alt=""
+                className="max-h-full max-w-full object-contain transition-transform duration-[1100ms] group-hover:scale-[1.02]"
+              />
+            ) : (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img src="/brand/formr-house.png" alt="" className="h-[60%] w-auto opacity-45" />
             )}
           </div>
         </div>
-      </div>
+
+        <aside className="flex flex-col justify-between border border-[var(--color-border)] bg-[var(--color-panel)] p-8 sm:p-10 lg:col-span-7">
+          <div>
+            <div className="flex items-baseline justify-between">
+              <span className="eyebrow-num">FT.</span>
+              <ArrowUpRight className="h-4 w-4 text-[var(--color-muted)] transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-[var(--color-terra)]" />
+            </div>
+            {project.room && <p className="mt-6 text-xs uppercase tracking-[0.24em] text-[var(--color-terra-deep)]">{project.room}</p>}
+            <h3 className="mt-3 font-display text-[2.25rem] leading-[1.05] tracking-tight text-[var(--color-ink)]">
+              {project.name}
+            </h3>
+            {project.next_action && (
+              <p className="mt-6 text-sm leading-relaxed text-[var(--color-muted)]">
+                <span className="text-[var(--color-terra-deep)]">Next —</span> {project.next_action}
+              </p>
+            )}
+          </div>
+
+          <div className="mt-10 space-y-4">
+            <Pill label={project.status} color={statusColor(project.status)} />
+            {project.estimated_budget != null && (
+              <div className="border-t border-[var(--color-border)] pt-4 text-sm text-[var(--color-muted)]">
+                <span className="text-[var(--color-ink)]">{currency(project.spent)}</span> spent
+                <span className="mx-1.5">of</span>
+                <span className="text-[var(--color-ink)]">{currency(project.estimated_budget)}</span>
+              </div>
+            )}
+          </div>
+        </aside>
+      </article>
     </Link>
   );
 }

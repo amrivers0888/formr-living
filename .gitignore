@@ -39,6 +39,9 @@ yarn-error.log*
 # vercel
 .vercel
 
+# design references (downloaded mocks / scratch)
+.design-refs/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

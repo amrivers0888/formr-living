@@ -1,27 +1,42 @@
 @import "tailwindcss";
 
-/* ---- Reno Hub — Modern English Cottage (light & airy sage) ---- */
+/* ---- Formr Living — Forma Haus editorial architecture aesthetic ---- */
 @theme {
-  --color-bg: #f5f1e8;         /* clean warm cream */
-  --color-bg-soft: #ece5d6;
-  --color-panel: #fdfbf6;      /* soft ivory card */
-  --color-border: #e7e0d0;     /* hairline linen */
-  --color-muted: #8a8474;      /* stone */
-  --color-text: #262420;       /* warm charcoal */
-  --color-ink: #201f1a;        /* deep editorial ink */
-  --color-accent: #7c8a6b;     /* sage */
-  --color-accent-strong: #5f6e50; /* deep sage (buttons, headings) */
-  --color-oak: #b08968;        /* natural oak */
-  --color-accent-soft: #e7ece0; /* pale sage tint */
+  /* Neutrals — cream body, near-black ink, cool grey */
+  --color-bg: #EEEEED;              /* cream body */
+  --color-bg-alt: #E6E5E2;
+  --color-panel: #FFFFFF;           /* pure white card */
+  --color-panel-warm: #FAF8F5;
+  --color-ink: #070605;             /* near-black text + hero bg */
+  --color-ink-soft: #1a1815;
+  --color-muted: #7c7b78;            /* warm grey text (readable) */
+  --color-muted-cool: #A8ADB5;      /* Dribbble palette cool grey */
+  --color-border: #DFDDD8;          /* hairline linen */
+  --color-border-strong: #C7C4BE;
+  --color-text: #070605;
 
-  --color-status-planning: #5f8a80;
+  /* Grayish off-white beige accent (was rust terracotta) */
+  --color-terra: #a89e8c;             /* mid dusty stone-beige */
+  --color-terra-deep: #7a6f5c;        /* deeper stone (readable on cream) */
+  --color-terra-soft: #eae4d5;        /* very light warm cream tint */
+  --color-tan: #d0c6b1;               /* light off-white beige for on-ink surfaces */
+
+  /* Semantic */
+  --color-accent: #a89e8c;
+  --color-accent-strong: #7a6f5c;
+  --color-accent-soft: #eae4d5;
+  --color-oak: #a89e8c;
+  --color-oak-deep: #7a6f5c;
+
+  /* Status */
+  --color-status-planning: #6b7d8a;
   --color-status-ready: #4e7db0;
-  --color-status-progress: #c08a2e;
-  --color-status-waiting: #c2703a;
-  --color-status-hold: #7c8592;
+  --color-status-progress: #b47a2e;
+  --color-status-waiting: #9B5234;
+  --color-status-hold: #8a8580;
   --color-status-done: #5e8f63;
 
-  --radius-xl2: 1.25rem;
+  --radius-xl2: 0.5rem;           /* tighter, editorial */
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --font-display: var(--font-fraunces);
@@ -30,36 +45,123 @@
 html { color-scheme: light; }
 
 body {
-  background:
-    radial-gradient(1100px 620px at 85% -10%, rgba(124, 138, 107, 0.14), transparent 60%),
-    radial-gradient(900px 520px at 0% 0%, rgba(176, 137, 104, 0.12), transparent 55%),
-    var(--color-bg);
+  background: var(--color-bg);
   color: var(--color-text);
   font-family: var(--font-sans), system-ui, sans-serif;
   min-height: 100vh;
+  font-feature-settings: "ss01", "kern";
+  -webkit-font-smoothing: antialiased;
 }
 
-.font-display { font-family: var(--font-display), Georgia, "Times New Roman", serif; letter-spacing: -0.015em; }
+/* Display serif — Fraunces optical-size tuned for large sizes, tight tracking */
+.font-display {
+  font-family: var(--font-display), "Playfair Display", Georgia, serif;
+  font-weight: 400;
+  letter-spacing: -0.035em;
+  font-feature-settings: "ss01", "liga", "kern";
+  font-variation-settings: "SOFT" 0, "WONK" 0, "opsz" 144;
+}
 
-/* Editorial eyebrow label */
-.eyebrow { text-transform: uppercase; letter-spacing: 0.2em; font-size: 0.7rem; font-weight: 600; color: var(--color-muted); }
+.font-display-huge {
+  font-family: var(--font-display), Georgia, serif;
+  font-weight: 400;
+  letter-spacing: -0.055em;
+  line-height: 0.92;
+  font-variation-settings: "SOFT" 0, "WONK" 0, "opsz" 144;
+}
 
-/* Paper-like card — flat, editorial */
+/* Numbered eyebrow — 01. Section Title */
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--color-terra-deep);
+  letter-spacing: 0.02em;
+}
+.eyebrow-num {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--color-terra-deep);
+  font-variant-numeric: tabular-nums;
+}
+.eyebrow-on-ink {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--color-tan);
+  letter-spacing: 0.02em;
+}
+
+/* Editorial dividers */
+.divider-ink {
+  height: 1px;
+  background: var(--color-ink);
+  opacity: 0.12;
+}
+.divider-on-ink {
+  height: 1px;
+  background: #EEEEED;
+  opacity: 0.14;
+}
+
+/* White paper card — flat, hairline border, no shadow by default */
+.card {
+  background: var(--color-panel);
+  border: 1px solid var(--color-border);
+  transition: border-color .25s ease, transform .25s ease;
+}
+.card:hover { border-color: var(--color-border-strong); }
+
+.card-hover:hover { transform: translateY(-2px); }
+
+/* Ink card — for the dark hero + footer */
+.card-ink {
+  background: var(--color-ink);
+  color: #EEEEED;
+  border: 1px solid #1a1815;
+}
+
+/* Kept for backward compat with older components */
 .glass {
   background: var(--color-panel);
   border: 1px solid var(--color-border);
-  box-shadow: 0 1px 2px rgba(60, 50, 30, 0.03);
+  color: var(--color-text);
 }
-.glass-hover { transition: transform .22s ease, box-shadow .22s ease; }
+.glass-hover { transition: transform .25s ease, border-color .25s ease; }
 .glass-hover:hover {
   transform: translateY(-2px);
-  box-shadow: 0 22px 48px -28px rgba(40, 34, 20, 0.45);
+  border-color: var(--color-border-strong);
 }
 
-/* Thin scrollbars */
-* { scrollbar-width: thin; scrollbar-color: #d8cfbd transparent; }
+/* Terracotta pill button */
+.btn-terra {
+  background: var(--color-ink);
+  color: #EEEEED;
+  border: 1px solid var(--color-ink);
+  transition: background .2s ease, color .2s ease, transform .2s ease;
+}
+.btn-terra:hover {
+  background: var(--color-terra);
+  border-color: var(--color-terra);
+}
+
+.chip-outline {
+  background: transparent;
+  border: 1px solid var(--color-border-strong);
+  color: var(--color-text);
+}
+
+/* Text helpers */
+.on-ink { color: #EEEEED; }
+.on-ink-muted { color: var(--color-muted-cool); }
+.on-ink-tan { color: var(--color-tan); }
+
+/* Scrollbars */
+* { scrollbar-width: thin; scrollbar-color: rgba(7, 6, 5, 0.2) transparent; }
 ::-webkit-scrollbar { width: 8px; height: 8px; }
-::-webkit-scrollbar-thumb { background: #d8cfbd; border-radius: 999px; }
+::-webkit-scrollbar-thumb { background: rgba(7, 6, 5, 0.2); border-radius: 999px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(7, 6, 5, 0.4); }
 
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }

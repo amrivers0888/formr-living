@@ -1,0 +1,309 @@
+{
+  "notes": "Batch 2: 33 more labeled Lowe's PDFs downloaded 2026-09-18 afternoon. Skips items labeled 'ignore'. Skips duplicates already in batch 1 (the drywall returns in txn #201744227262052238 were originally from txn #300901197 — record only kept items here).",
+  "projects": [
+    { "name": "Basement Electrical", "room": "Basement", "type": "Electrical" },
+    { "name": "Basement Floor",      "room": "Basement", "type": "Flooring" },
+    { "name": "Kitchen Sink",        "room": "Kitchen",  "type": "Plumbing" },
+    { "name": "Kitchen Cabinets",    "room": "Kitchen",  "type": "Cabinetry / Paint" },
+    { "name": "Half Bath",           "room": "Half Bath", "type": "Trim & Millwork" },
+    { "name": "Guest Closet",        "room": "Guest Room", "type": "Storage" },
+    { "name": "Garage",              "room": "Garage",   "type": "Floor & Paint" },
+    { "name": "Living Room Paint",   "room": "Living Room", "type": "Painting" }
+  ],
+  "receipts": [
+    {
+      "txn": "528701460", "date": "2026-07-31", "store": "Lowe's — Fultondale",
+      "items": [
+        { "project": "Basement Framing", "category": "Fasteners", "item": "#10 x 2-1/2-in Epoxy Exterior Multi-material Screws (per box)", "sku": "1461256", "model": "116865", "qty": 1, "price": 39.98, "status": "RECEIVED" },
+        { "project": "Basement Framing", "category": "Panel",     "item": "1/4-in x 2-ft x 4-ft Square Sanded Plywood", "sku": "1097993", "model": "1097993", "qty": 1, "price": 19.98, "status": "RECEIVED" },
+        { "project": "Basement Framing", "category": "Anchors",   "item": "100-lb 5/8-in x 2-1/2-in Toggle Bolt Anchors w/ Screws, 10-Pack", "sku": "72413", "model": "25220", "qty": 1, "price": 14.98, "status": "RECEIVED" },
+        { "project": "Basement Framing", "category": "Lumber",    "item": "1-in x 2-in x 6-ft Unfinished Select S4S Pine Softwood Board", "sku": "2503282", "model": "L51144216", "qty": 2, "price": 4.10,  "status": "RECEIVED" }
+      ]
+    },
+    {
+      "txn": "634532305", "date": "2026-07-30", "store": "Lowe's — Fultondale",
+      "items": [
+        { "project": "Basement Paint", "category": "Supplies",  "item": "Economy 2-in Flat Multipurpose Brush", "sku": "253307", "model": "2200420", "qty": 1, "price": 3.98, "status": "RECEIVED" },
+        { "project": "Basement Paint", "category": "Spray Paint","item": "American Accents 2X Ultra Cover Satin Canyon Black Spray Paint + Primer, 12-oz", "sku": "5271555", "model": "327916", "qty": 2, "price": 6.98, "status": "RECEIVED" }
+      ]
+    },
+    {
+      "txn": "189668750", "date": "2026-07-30", "store": "Lowe's — Fultondale",
+      "items": [
+        { "project": "Master Bathroom", "category": "Sink",  "item": "Oakmont Vitreous China 21.4-in Undermount Rectangular White Bathroom Sink", "sku": "470227", "model": "ML-20505", "qty": 1, "price": 71.00, "status": "RECEIVED", "note": "Second sink kept" },
+        { "project": "Master Bathroom", "category": "Caulk", "item": "Advanced Silicone 10.1-oz Kitchen & Bath Clear Silicone Caulk", "sku": "48285", "model": "2812562", "qty": 1, "price": 11.58, "status": "RECEIVED" },
+        { "project": "Master Bathroom", "category": "Sink",  "item": "Oakmont Vitreous China 21.4-in Undermount Rectangular White Bathroom Sink", "sku": "470227", "model": "ML-20505", "qty": 1, "price": 71.00, "status": "RETURNED", "note": "First sink returned" }
+      ]
+    },
+    {
+      "txn": "100571861", "date": "2026-07-18", "store": "Lowe's — Fultondale",
+      "items": [
+        { "project": "Living Room Fireplace / TV Wall", "category": "Decorative Trim Boxes", "item": "11/16-in x 8-ft Unfinished Poplar 40 Decorative Moulding", "sku": "161622", "model": "40-8WHW", "qty": 5, "price": 5.98, "status": "RECEIVED" },
+        { "project": "Basement Framing",     "category": "Shims",           "item": "0.25-in x 1.375-in x 7.875-in Pine Wood Shim, 12-Pack", "sku": "3969", "model": "PSH8-12-36-20", "qty": 4, "price": 1.78,  "status": "RECEIVED" },
+        { "project": "Living Room Paint",    "category": "Supplies",        "item": "6-Pack 9-in x 3/8-in Nap Standard Knit Paint Roller Cover", "sku": "1623653", "model": "93958", "qty": 1, "price": 12.98, "status": "RECEIVED" },
+        { "project": "Living Room Paint",    "category": "Supplies",        "item": "Original Multi-Surface 2090 1.88-in x 60yd Painter's Tape", "sku": "590695", "model": "2090-48C", "qty": 1, "price": 7.98, "status": "RECEIVED" },
+        { "project": "Kitchen Sink",         "category": "Plumbing",        "item": "1-1/2-in PVC DWV Female Trap Adapter", "sku": "23290", "model": "PVC 00104 0800", "qty": 1, "price": 2.18, "status": "RECEIVED" },
+        { "project": "Kitchen Sink",         "category": "Adhesive",        "item": "WaterWeld White Epoxy Adhesive", "sku": "355112", "model": "8277", "qty": 1, "price": 8.98, "status": "RECEIVED" },
+        { "project": "Living Room Fireplace / TV Wall", "category": "TV Frame", "item": "3/4-in x 1-1/4-in x 8-ft Colonial Unfinished 1339 Shoe Moulding", "sku": "1362414", "model": "1339-8FTWHW", "qty": 3, "price": 9.99, "status": "RECEIVED" },
+        { "project": "Living Room Paint",    "category": "Paint",           "item": "Showcase Eggshell Ultra White Tintable Interior Paint + Primer, OC-20 (1-gallon)", "sku": null, "model": "OC-20", "qty": 2, "price": 50.98, "status": "RECEIVED" },
+        { "project": "Living Room Paint",    "category": "Supplies",        "item": "12-in Disposable Paint Tray Liner", "sku": "235048", "model": "02132", "qty": 1, "price": 1.98, "status": "RECEIVED" },
+        { "project": "Basement Electrical",  "category": "Boxes",           "item": "1-Gang PVC New-work Switch/Outlet Electrical Box", "sku": "2987560", "model": "LEZ23SNWV", "qty": 1, "price": 1.18, "status": "RECEIVED" },
+        { "project": "Basement Electrical",  "category": "Wire",            "item": "25-ft 12/2 Romex SIMpull Solid CU NM-B Ground Wire (by-the-roll)", "sku": "70012", "model": "28828221", "qty": 1, "price": 42.00, "status": "RECEIVED" },
+        { "project": "Basement Electrical",  "category": "Boxes",           "item": "1-Gang PVC New-work Switch/Outlet Electrical Box", "sku": "2987573", "model": "LEZ20SNWV", "qty": 3, "price": 0.89, "status": "RECEIVED" },
+        { "project": "Basement Electrical",  "category": "Boxes",           "item": "2-Gang Plastic New-work Rectangular Electrical Box", "sku": "2987564", "model": "LEZ32DN", "qty": 1, "price": 2.38, "status": "RECEIVED" },
+        { "project": "Basement Electrical",  "category": "Boxes",           "item": "1-Gang Plastic New-work Round Electrical Box", "sku": "2987577", "model": "LEZ18CN", "qty": 1, "price": 3.68, "status": "RECEIVED" },
+        { "project": "Basement Electrical",  "category": "Connectors",      "item": "Lever Wire Connectors 5-Port Clear, 10-Pack", "sku": "5259722", "model": "30-01L25", "qty": 1, "price": 7.98, "status": "RECEIVED" }
+      ]
+    },
+    {
+      "txn": "300901197", "date": "2026-07-16", "store": "Lowe's — Fultondale",
+      "items": [
+        { "project": "Basement Drywall", "category": "Drywall Panel",   "item": "1/2-in x 4-1/2-ft x 12-ft Lite-Weight Stretch 54 Regular Drywall Panel", "sku": "367345", "model": "012284", "qty": 75, "price": 25.58, "status": "RECEIVED", "note": "Net price after Member Volume Discount ($1918.50/75)" },
+        { "project": "Basement Drywall", "category": "Drywall Panel",   "item": "1/2-in x 4-ft x 8-ft M2Tech Mold Resistant Drywall Panel", "sku": "337172", "model": "640353", "qty": 10, "price": 19.98, "status": "RECEIVED", "note": "Net price after Member Volume Discount ($199.80/10)" },
+        { "project": "Basement Drywall", "category": "Compound",        "item": "Quick Set Lite 45-Minute 18-lb Drywall Joint Compound Bag", "sku": "299315", "model": "50002561", "qty": 2, "price": 11.77, "status": "RECEIVED", "note": "Net price after Bulk Savings ($23.54/2)" },
+        { "project": "Basement Drywall", "category": "Fasteners",       "item": "#6 x 1-1/4-in Bugle Coarse Thread Drywall Screws, 5-lb", "sku": "112329", "model": "48362", "qty": 2, "price": 19.98, "status": "RECEIVED", "note": "Net after Volume Discount ($39.96/2)" },
+        { "project": "Basement Drywall", "category": "Compound",        "item": "4.5-Gallon Premixed All-Purpose Drywall Joint Compound Bucket", "sku": "11751", "model": "380501", "qty": 5, "price": 21.87, "status": "RECEIVED", "note": "Net after Volume Discount ($109.35/5)" },
+        { "project": "Basement Drywall", "category": "Joint Tape",      "item": "Paper Tape 2.09-in x 500-ft Solid Drywall Joint Tape", "sku": "11752", "model": "50002574", "qty": 2, "price": 7.12,  "status": "RECEIVED", "note": "Net after Volume Discount ($14.24/2)" },
+        { "project": "Basement Drywall", "category": "Corner Bead",     "item": "1.25-in x 9-ft Quicksilver Metal 90-Degree Corner Bead", "sku": "11816", "model": "00751361490152", "qty": 4, "price": 3.94, "status": "RECEIVED", "note": "Net after Volume Discount ($15.76/4). Return of extra qty already tracked in batch 1." }
+      ]
+    },
+    {
+      "txn": "724368412", "date": "2026-07-12", "store": "Lowe's — Fultondale",
+      "items": [
+        { "project": "Basement Framing",    "category": "Lumber",   "item": "2-in x 4-in x 96-in Kiln-Dried Fir #2 Premium", "sku": "7001", "model": "7288-96", "qty": 10, "price": 4.48, "status": "RECEIVED" },
+        { "project": "Basement Electrical", "category": "Boxes",    "item": "2-Gang Plastic New-work Rectangular Electrical Box", "sku": "2987564", "model": "LEZ32DN", "qty": 1, "price": 2.38, "status": "RECEIVED" },
+        { "project": "Basement Framing",    "category": "Tools",    "item": "12-in 40-Tooth Rough Finish Carbide-Tipped Miter/Table Saw Blade", "sku": "3728204", "model": "13049", "qty": 1, "price": 39.98, "status": "RECEIVED" },
+        { "project": "Living Room Paint",   "category": "Supplies", "item": "Wall & Trim 2-1/2-in Reusable Angle Wall Trim Brush", "sku": "1034373", "model": "880289250", "qty": 1, "price": 11.48, "status": "RECEIVED" },
+        { "project": "Half Bath",           "category": "Decorative Trim", "item": "11/16-in x 8-ft Unfinished Poplar 40 Decorative Moulding", "sku": "161622", "model": "40-8WHW", "qty": 5, "price": 5.98, "status": "RECEIVED" }
+      ]
+    },
+    {
+      "txn": "196050192", "date": "2026-07-11", "store": "Lowe's — Fultondale",
+      "items": [
+        { "project": "Living Room Paint", "category": "Paint", "item": "Showcase Eggshell Ultra White Tintable Interior Paint + Primer, HGSW7029 (1-gallon)", "sku": null, "model": "HGSW7029", "qty": 1, "price": 50.98, "status": "RECEIVED" },
+        { "project": "Living Room Paint", "category": "Paint", "item": "Showcase Eggshell Base C Tintable Interior Paint + Primer, 1484 (1-gallon)", "sku": null, "model": "1484", "qty": 1, "price": 50.98, "status": "RECEIVED" }
+      ]
+    },
+    {
+      "txn": "195870875", "date": "2026-07-11", "store": "Lowe's — Fultondale",
+      "items": [
+        { "project": "Basement Door + Window Trim", "category": "Spackle",       "item": "DryDex White Color-Changing Spackling, 16 fl oz", "sku": "5273810", "model": "7079812348", "qty": 1, "price": 9.48, "status": "RECEIVED" },
+        { "project": "Basement Framing",           "category": "Lumber",         "item": "2-in x 4-in x 8-ft #2 Prime Southern Yellow Pine Pressure Treated Lumber", "sku": "196087", "model": "OG2P20408-AG", "qty": 1, "price": 4.68, "status": "RECEIVED" },
+        { "project": "Basement Framing",           "category": "Shims",          "item": "0.25-in x 1.375-in x 7.875-in Pine Wood Shim, 12-Pack", "sku": "3969", "model": "PSH8-12-36-20", "qty": 5, "price": 1.78, "status": "RECEIVED" },
+        { "project": "Living Room Fireplace / TV Wall", "category": "TV Frame",  "item": "11/16-in x 8-ft Unfinished Poplar 40 Decorative Moulding", "sku": "161622", "model": "40-8WHW", "qty": 7, "price": 5.98, "status": "RECEIVED" },
+        { "project": "Basement Framing",           "category": "Lumber",         "item": "4-in x 4-in x 6-ft #2 Southern Yellow Pine Ground-Contact Pressure Treated Lumber", "sku": "312530", "model": "Y240406-GC", "qty": 2, "price": 9.30, "status": "RECEIVED" }
+      ]
+    },
+    {
+      "txn": "252671944", "date": "2026-07-10", "store": "Lowe's — Fultondale",
+      "items": [
+        { "project": "Basement Ceiling", "category": "Joint Lines", "item": "1-in x 2-in x 8-ft Whitewood Furring Strip", "sku": "4511", "model": "04511", "qty": 6, "price": 1.48, "status": "RECEIVED" },
+        { "project": "Basement Framing", "category": "Lumber", "item": "1-1/4-in x 6-in x 8-ft Premium Southern Yellow Pine Pressure Treated Lumber", "sku": "312521", "model": "OGP540608-AG", "qty": 3, "price": 10.18, "status": "RECEIVED" }
+      ]
+    },
+    {
+      "txn": "242108297", "date": "2026-07-10", "store": "Lowe's — Fultondale",
+      "items": [
+        { "project": "Half Bath",           "category": "Decorative Trim", "item": "3/4-in x 1-3/4-in x 8-ft Unfinished White Hardwood OML43 Chair Rail Moulding", "sku": "123318", "model": "OML43-8FTWHW", "qty": 3, "price": 14.98, "status": "RECEIVED" },
+        { "project": "Basement Electrical", "category": "Boxes",           "item": "RACO 2-Gang Galvanized Steel New-work Square Electrical Box", "sku": "70965", "model": "8232", "qty": 1, "price": 3.98, "status": "RECEIVED" },
+        { "project": "Basement Electrical", "category": "Connectors",      "item": "Twist-on Wire Connectors Multi 25-Pack", "sku": "48558", "model": "773305", "qty": 1, "price": 3.98, "status": "RECEIVED" },
+        { "project": "Half Bath",           "category": "Caulk",           "item": "ALEX Plus 10.1-oz Paint & Trim White Paintable Latex Caulk", "sku": "219873", "model": "18101", "qty": 1, "price": 3.98, "status": "RECEIVED" },
+        { "project": "Half Bath",           "category": "Decorative Trim", "item": "11/16-in x 8-ft Unfinished Poplar 40 Decorative Moulding", "sku": "161622", "model": "40-8WHW", "qty": 5, "price": 5.98, "status": "RECEIVED" },
+        { "project": "Basement Electrical", "category": "Wire",            "item": "50-ft 12/2 Romex SIMpull Solid CU NM-B Ground Wire (by-the-roll)", "sku": "70014", "model": "28828222", "qty": 1, "price": 69.00, "status": "RECEIVED" },
+        { "project": "Living Room Fireplace / TV Wall", "category": "Decorative Trim", "item": "Miter Steel Snips", "sku": "5992015", "model": "MS-L", "qty": 1, "price": 24.98, "status": "RECEIVED" }
+      ]
+    },
+    {
+      "txn": "424701972", "date": "2026-07-01", "store": "Lowe's — Fultondale",
+      "items": [
+        { "project": "Master Bathroom", "category": "Tools", "item": "9-in Ceramic Tile Nipper", "sku": "845114", "model": "TN2", "qty": 1, "price": 33.33, "status": "RECEIVED" }
+      ]
+    },
+    {
+      "txn": "300902176", "date": "2026-06-25", "store": "Lowe's — Fultondale",
+      "items": [
+        { "project": "Master Bathroom", "category": "Backer Board", "item": "GoBoard 1/2-in x 3-ft x 5-ft Polyisocyanurate Backer Board Sheet", "sku": "762192", "model": "90016810", "qty": 3, "price": 26.98, "status": "RECEIVED" }
+      ]
+    },
+    {
+      "txn": "300902175", "date": "2026-06-24", "store": "Lowe's — Fultondale",
+      "items": [
+        { "project": "Basement Bathroom", "category": "Tile", "item": "Calacatta Gem 10-in x 12-in Matte Ceramic Marble-Look Hexagon Mosaic Tile (0.81 sq ft/piece)", "sku": "918710", "model": "SM4215HEXXTMTLW", "qty": 16, "price": 7.99, "status": "RECEIVED", "note": "Labeled 'basement shower' — routed to Basement Bathroom" }
+      ]
+    },
+    {
+      "txn": "155659458", "date": "2026-06-12", "store": "Lowe's — Fultondale",
+      "items": [
+        { "project": "Kitchen Sink",    "category": "Plumbing", "item": "Miracle Wrap 1-in x 8-ft Pipe Wrap Tape", "sku": "518500", "model": "1000000483", "qty": 1, "price": 10.07, "status": "RECEIVED" },
+        { "project": "Master Bathroom", "category": "Supplies", "item": "5-gallon Pink Plastic Bucket Lid", "sku": "7513636", "model": "PN0270", "qty": 1, "price": 2.48, "status": "RECEIVED" },
+        { "project": "Kitchen Sink",    "category": "Plumbing", "item": "2-in Black Rubber Universal Fit Flush Valve Seal", "sku": "3625394", "model": "RB835-51", "qty": 1, "price": 2.98, "status": "RECEIVED" },
+        { "project": "Kitchen Sink",    "category": "Plumbing", "item": "6-Pack 1/2-in Assorted Rubber Faucet O-Ring", "sku": "652285", "model": "10711", "qty": 1, "price": 7.18, "status": "RECEIVED" }
+      ]
+    },
+    {
+      "txn": "602342400", "date": "2026-06-07", "store": "Lowe's — Fultondale",
+      "items": [
+        { "project": "Master Bathroom", "category": "Tools",    "item": "10-in Wrench", "sku": "5281221", "model": "54268", "qty": 1, "price": 34.28, "status": "RECEIVED" },
+        { "project": "Master Bathroom", "category": "Tools",    "item": "1-1/4-in PVC Cutter", "sku": "2146982", "model": "58712", "qty": 1, "price": 18.68, "status": "RECEIVED" },
+        { "project": "Master Bathroom", "category": "Cleaning", "item": "32 fl oz Liquid Mold Remover", "sku": "1637434", "model": "FG590", "qty": 1, "price": 11.88, "status": "RECEIVED" },
+        { "project": "Master Bathroom", "category": "Tile",     "item": "Vistarro Calacatta Grey 11-in x 12-in Glossy Ceramic Marble-Look Hexagon Mosaic Wall Tile", "sku": "4144981", "model": "VT2125PICKHC1P2", "qty": 24, "price": 5.57, "status": "RETURNED", "note": "Return Completed on receipt — unlabeled but grouped with master shower context" }
+      ]
+    },
+    {
+      "txn": "300902158", "date": "2026-06-06", "store": "Lowe's — Fultondale",
+      "items": [
+        { "project": "Master Bathroom", "category": "Backer Board", "item": "GoBoard 1/2-in x 4-ft x 8-ft Polyisocyanurate Backer Board Sheet", "sku": "1246039", "model": "90018495", "qty": 3, "price": 52.98, "status": "RECEIVED" }
+      ]
+    },
+    {
+      "txn": "990019131", "date": "2026-06-06", "store": "Lowe's — Fultondale",
+      "items": [
+        { "project": "Master Bathroom",  "category": "Supplies", "item": "Commander X-small 2-Gallon Black Stackable Tote w/ Snap Lid", "sku": "6039266", "model": "6039266", "qty": 1, "price": 2.98, "status": "RECEIVED" },
+        { "project": "Master Bathroom",  "category": "Sealer",   "item": "GoBoard 10.3-oz White Joint Sealer", "sku": "2415647", "model": "GBPS10", "qty": 4, "price": 12.98, "status": "RECEIVED" },
+        { "project": "Basement Framing", "category": "Lumber",   "item": "2-in x 6-in x 10-ft #2 Prime Southern Yellow Pine Kiln-Dried Lumber", "sku": "73697", "model": "020610#2P SYP", "qty": 2, "price": 8.88, "status": "RECEIVED" },
+        { "project": "Basement Framing", "category": "Lumber",   "item": "2-in x 4-in x 96-in Kiln-Dried Whitewood #2 Stud", "sku": "6005", "model": "5790-96", "qty": 8, "price": 3.98, "status": "RECEIVED" }
+      ]
+    },
+    {
+      "txn": "978676661", "date": "2026-06-06", "store": "Lowe's — Fultondale",
+      "items": [
+        { "project": "Master Bathroom", "category": "Plumbing",    "item": "2-in Gripper PVC DWV Test Plug", "sku": "23508", "model": "334013", "qty": 1, "price": 8.18, "status": "RECEIVED" },
+        { "project": "Master Bathroom", "category": "Fasteners",   "item": "GoBoard Fastener Kit", "sku": "6902756", "model": "GB-FAST-1.25WASH-WD", "qty": 1, "price": 29.98, "status": "RECEIVED" },
+        { "project": "Master Bathroom", "category": "Supplies",    "item": "5-gallon BPA-Free Plastic Blue General Bucket", "sku": "4853", "model": "57640", "qty": 2, "price": 4.58, "status": "RECEIVED" },
+        { "project": "Master Bathroom", "category": "Tools",       "item": "Aluminum 48-in 3-Vial I-Beam Level", "sku": "1061180", "model": "CMHT82345", "qty": 1, "price": 21.98, "status": "RECEIVED" },
+        { "project": "Master Bathroom", "category": "Grout",       "item": "ProPlus Yellow Heavy Duty Polyurethane Grout Sponge", "sku": "271359", "model": "72603", "qty": 1, "price": 3.29, "status": "RECEIVED" },
+        { "project": "Master Bathroom", "category": "Mortar",      "item": "UltraFlex 1 White Thinset Tile Mortar, 50-lb", "sku": "193422", "model": "2905736", "qty": 3, "price": 14.98, "status": "RECEIVED" },
+        { "project": "Master Bathroom", "category": "Tools",       "item": "14-in Ceramic Tile Cutter Kit", "sku": "5991997", "model": "TC14-L", "qty": 1, "price": 24.98, "status": "RECEIVED" }
+      ]
+    },
+    {
+      "txn": "300901147", "date": "2026-05-27", "store": "Lowe's — Fultondale",
+      "items": [
+        { "project": "Custom Walnut Pantry", "category": "Tools", "item": "Kreg Pocket-Hole Jig 720PRO Plus w/ Automaxx Clamping", "sku": "5059314", "model": "KPHJ720PROL", "qty": 1, "price": 149.00, "status": "RECEIVED" },
+        { "project": "Basement Drywall",    "category": "Tools", "item": "Panel Carrier 100-lb Load Capacity Carbon/Steel Plywood Carrier", "sku": "4897495", "model": "KMA3000", "qty": 1, "price": 28.98, "status": "RECEIVED" },
+        { "project": "Master Bathroom",      "category": "Tools", "item": "96-in NGX 160-lb Edge Clamp", "sku": "5031159", "model": "546100", "qty": 1, "price": 69.98, "status": "RECEIVED" }
+      ]
+    },
+    {
+      "txn": "282118105", "date": "2026-05-20", "store": "Lowe's — Fultondale",
+      "items": [
+        { "project": "Guest Closet",     "category": "Shelving",  "item": "TuffCoat Anti-Rust 96-in x 16-in White All-Purpose Wire Shelf", "sku": "50043", "model": "4736", "qty": 1, "price": 29.98, "status": "RECEIVED" },
+        { "project": "Guest Closet",     "category": "Shelving",  "item": "84-Pack Plastic End Cap (White)", "sku": "48171", "model": "75355", "qty": 1, "price": 4.98, "status": "RECEIVED" },
+        { "project": "Basement Framing", "category": "Panel",     "item": "1/4-in x 2-ft x 4-ft Pine Square Sanded Plywood", "sku": "7702", "model": "NA", "qty": 2, "price": 17.34, "status": "RECEIVED" },
+        { "project": "Guest Closet",     "category": "Shelving",  "item": "Fixed Mount 12-Pack White Resin Shelf Bracket", "sku": "354478", "model": "17415", "qty": 1, "price": 17.98, "status": "RECEIVED" },
+        { "project": "Guest Closet",     "category": "Shelving",  "item": "Fixed Mount 48-Pack White Resin Wire Closet Back Clip", "sku": "49553", "model": "17705", "qty": 1, "price": 14.48, "status": "RECEIVED" }
+      ]
+    },
+    {
+      "txn": "571222090", "date": "2026-05-17", "store": "Lowe's — Fultondale",
+      "items": [
+        { "project": "Kitchen Sink", "category": "Plumbing", "item": "1-1/2-in Plastic Direct-Connect Branch Tailpiece 5/8-in OD Outlet", "sku": "172388", "model": "1000000634", "qty": 1, "price": 5.98, "status": "RECEIVED" },
+        { "project": "Kitchen Sink", "category": "Plumbing", "item": "1-1/2-in x 1-1/4-in PVC DWV Reducing Female Trap Adapter", "sku": "22652", "model": "PVC 00104P 0600", "qty": 1, "price": 3.28, "status": "RECEIVED" },
+        { "project": "Kitchen Sink", "category": "Plumbing", "item": "1-1/2-in Plastic Slip-Joint Extension Tube", "sku": "24604", "model": "1000000609", "qty": 1, "price": 9.48, "status": "RECEIVED" },
+        { "project": "Kitchen Sink", "category": "Plumbing", "item": "1-1/2-in Plastic End Outlet Tee", "sku": "6604637", "model": "1000000491", "qty": 1, "price": 7.98, "status": "RECEIVED" },
+        { "project": "Kitchen Sink", "category": "Plumbing", "item": "1-1/4-in Schedule 40 PVC Coupling", "sku": "23854", "model": "PVC 02100 1200", "qty": 1, "price": 1.28, "status": "RECEIVED" },
+        { "project": "Kitchen Sink", "category": "Plumbing", "item": "1/2-in to 1-1/4-in Stainless Steel Adjustable Clamp", "sku": "1436426", "model": "IDL04", "qty": 1, "price": 2.18, "status": "RECEIVED" },
+        { "project": "Kitchen Sink", "category": "Plumbing", "item": "1-1/4-in Plastic Slip-Joint Nut", "sku": "2483951", "model": "1000000570", "qty": 1, "price": 3.48, "status": "RECEIVED" },
+        { "project": "Kitchen Sink", "category": "Plumbing", "item": "1-1/2-in Plastic Slip-Joint Nut", "sku": "2483950", "model": "1000000569", "qty": 1, "price": 3.48, "status": "RECEIVED" },
+        { "project": "Kitchen Sink", "category": "Fixture",  "item": "Badger 1XL Continuous Feed 1/3-HP Septic-Safe Non-Corded Garbage Disposal", "sku": "2329355", "model": "79050-ISE", "qty": 1, "price": 129.00, "status": "RECEIVED" },
+        { "project": "Kitchen Sink", "category": "Plumbing", "item": "1-1/2-in Plastic P-Trap", "sku": "25021", "model": "1000000600", "qty": 1, "price": 8.88, "status": "RECEIVED" }
+      ]
+    },
+    {
+      "txn": "660586320", "date": "2026-05-15", "store": "Lowe's — Fultondale",
+      "items": [
+        { "project": "Basement Electrical", "category": "Wire", "item": "50-ft 12/2 Romex SIMpull Solid CU NM-B Ground Wire (by-the-roll)", "sku": "70014", "model": "28828222", "qty": 2, "price": 69.00, "status": "RECEIVED" }
+      ]
+    },
+    {
+      "txn": "618623742", "date": "2026-05-15", "store": "Lowe's — Fultondale",
+      "items": [
+        { "project": "Basement Electrical", "category": "Outlets",  "item": "20-Amp 125-volt Tamper Resistant GFCI Decorator Outlet Receptacle, White", "sku": "5195466", "model": "TRGF20W-BX-LW", "qty": 2, "price": 25.48, "status": "RECEIVED" },
+        { "project": "Basement Electrical", "category": "Wire",     "item": "50-ft 12/2 Romex SIMpull Solid CU NM-B Ground Wire (by-the-roll)", "sku": "70014", "model": "28828222", "qty": 1, "price": 69.00, "status": "RECEIVED" },
+        { "project": "Basement Electrical", "category": "Breakers", "item": "QO 30-amp 2-Pole Standard Trip Circuit Breaker", "sku": "71820", "model": "QO230CP", "qty": 1, "price": 40.98, "status": "RECEIVED" },
+        { "project": "Basement Electrical", "category": "Breakers", "item": "QO 20-amp 1-Pole Standard Trip Circuit Breaker", "sku": "71802", "model": "QO120CP", "qty": 2, "price": 16.98, "status": "RECEIVED" },
+        { "project": "Basement Electrical", "category": "Fittings", "item": "Rigid 1/2-in Insulated Bushing", "sku": "55140", "model": "47321", "qty": 2, "price": 0.48, "status": "RECEIVED" },
+        { "project": "Basement Electrical", "category": "Fittings", "item": "Flex 1/2-in Anti-Short Bushing, 20-Pack", "sku": "5034205", "model": "02-55038L", "qty": 1, "price": 2.78, "status": "RECEIVED" },
+        { "project": "Basement Electrical", "category": "Outlets",  "item": "20-Amp 125-volt Commercial Duplex Outlet Receptacle, White", "sku": "91616", "model": "BR20W-SP-LW", "qty": 10, "price": 4.28, "status": "RECEIVED" },
+        { "project": "Basement Electrical", "category": "Fittings", "item": "1/2-in x 10-in Black Steel Threaded Nipple", "sku": "13011", "model": "20414", "qty": 1, "price": 6.94, "status": "RECEIVED" },
+        { "project": "Basement Electrical", "category": "Fittings", "item": "3/4-in 90-Degree Liquid Tight PVC Right-Angle Connector", "sku": "116027", "model": "P492-UPC", "qty": 1, "price": 4.98, "status": "RECEIVED" }
+      ]
+    },
+    {
+      "txn": "879827196", "date": "2026-04-30", "store": "Lowe's — Fultondale",
+      "items": [
+        { "project": "Kitchen Cabinets",     "category": "Supplies", "item": "2-in Kit Smooth Mini Foam Paint Roller Cover", "sku": "7217120", "model": "770260300", "qty": 1, "price": 5.79, "status": "RECEIVED" },
+        { "project": "Basement Electrical",  "category": "Switches", "item": "20-amp Single-pole Toggle Light Switch, White", "sku": "1613968", "model": "CSB120W-BX-LW", "qty": 2, "price": 4.28, "status": "RECEIVED" },
+        { "project": "Kitchen Sink",         "category": "Caulk",    "item": "Supreme Silicone 10.1-oz Kitchen & Bath Clear Silicone Caulk", "sku": "66835", "model": "2822051", "qty": 1, "price": 13.68, "status": "RECEIVED" },
+        { "project": "Basement Electrical",  "category": "Boxes",    "item": "2-Gang PVC New-work Switch/Outlet Electrical Box", "sku": "2987584", "model": "LEZ35DN-HW", "qty": 4, "price": 4.58, "status": "RECEIVED" },
+        { "project": "Basement Electrical",  "category": "Boxes",    "item": "1-Gang PVC New-work Switch/Outlet Electrical Box", "sku": "2987573", "model": "LEZ20SNWV", "qty": 11, "price": 0.94, "status": "RECEIVED" }
+      ]
+    },
+    {
+      "txn": "768666821", "date": "2026-04-23", "store": "Lowe's — Fultondale",
+      "items": [
+        { "project": "Basement Framing", "category": "Lumber", "item": "2-in x 4-in x 10-ft #2 Prime Southern Yellow Pine Kiln-Dried Lumber", "sku": "69466", "model": "020410#2P SYP", "qty": 10, "price": 6.48, "status": "RECEIVED" }
+      ]
+    },
+    {
+      "txn": "705406264", "date": "2026-04-23", "store": "Lowe's — Fultondale",
+      "items": [
+        { "project": "Basement Framing", "category": "Fasteners", "item": "#10 x 3-in Epoxy Exterior Construction Screws, per box", "sku": "580303", "model": "48309", "qty": 1, "price": 12.98, "status": "RECEIVED" },
+        { "project": "Basement Framing", "category": "Lumber",    "item": "2-in x 4-in x 10-ft #2 Prime Southern Yellow Pine Kiln-Dried Lumber", "sku": "69466", "model": "020410#2P SYP", "qty": 3, "price": 6.48, "status": "RECEIVED" }
+      ]
+    },
+    {
+      "txn": "300901111", "date": "2026-04-21", "store": "Lowe's — Fultondale",
+      "items": [
+        { "project": "Basement Framing", "category": "Fasteners", "item": "#10 x 3-in Epoxy Exterior Construction Screws, per box", "sku": "580303", "model": "48309", "qty": 1, "price": 12.98, "status": "RECEIVED" },
+        { "project": "Basement Framing", "category": "Fasteners", "item": "100-Pack 2-1/2-in Washered Drive Pin", "sku": "5049738", "model": "38091", "qty": 1, "price": 24.98, "status": "RECEIVED" },
+        { "project": "Basement Framing", "category": "Tools",     "item": "Single Shot Powder Actuated Hammer Tool", "sku": "5112408", "model": "12286", "qty": 1, "price": 34.98, "status": "RECEIVED" },
+        { "project": "Basement Framing", "category": "Fasteners", "item": "100-Count 0.22 Caliber Powder Actuated Load", "sku": "3487084", "model": "20602", "qty": 1, "price": 13.98, "status": "RECEIVED" }
+      ]
+    },
+    {
+      "txn": "300901108", "date": "2026-04-18", "store": "Lowe's — Fultondale",
+      "items": [
+        { "project": "Basement Paint", "category": "Tools", "item": "Magnum Project Painter Plus Electric Stationary Airless Paint Sprayer", "sku": "320050", "model": "257025", "qty": 1, "price": 269.00, "status": "RECEIVED" }
+      ]
+    },
+    {
+      "txn": "723862979", "date": "2026-04-17", "store": "Lowe's — Fultondale",
+      "items": [
+        { "project": "Basement Floor", "category": "Sealer",   "item": "Clear Solvent-Based Ready-to-Use Concrete Sealer, 5-gallon", "sku": "149825", "model": "EU5", "qty": 1, "price": 149.00, "status": "RECEIVED" },
+        { "project": "Basement Floor", "category": "Supplies", "item": "18-in x 3/8-in Nap WhiteDove Standard Woven Paint Roller Cover", "sku": "373072", "model": "14H670182", "qty": 1, "price": 11.98, "status": "RECEIVED" },
+        { "project": "Basement Floor", "category": "Tools",    "item": "6-in Fluted Rubbing Bricks", "sku": "787701", "model": "840", "qty": 1, "price": 18.68, "status": "RECEIVED" },
+        { "project": "Basement Floor", "category": "Supplies", "item": "Neutral pH Floor Cleaner, 128 fl oz", "sku": "369947", "model": "ZUNEUT128", "qty": 1, "price": 13.98, "status": "RECEIVED" }
+      ]
+    },
+    {
+      "txn": "617397313", "date": "2026-04-11", "store": "Lowe's — Fultondale",
+      "items": [
+        { "project": "Garage", "category": "Floor Stain", "item": "Valspar Base Water-Based Flat Concrete Stain, Onyx (1-gallon)", "sku": null, "model": "Onyx (VAL CONCRETE)", "qty": 1, "price": 45.98, "status": "RECEIVED" },
+        { "project": "Garage", "category": "Wall Paint",  "item": "4000 Eggshell Pastel Tintable Interior Paint (1-gallon)", "sku": "447515", "model": "007.9447515.007", "qty": 1, "price": 22.98, "status": "RECEIVED" }
+      ]
+    },
+    {
+      "txn": "292328546", "date": "2026-04-11", "store": "Lowe's — Fultondale",
+      "items": [
+        { "project": "Garage", "category": "Floor Stain",  "item": "Valspar Base Water-Based Flat Concrete Stain, Onyx (1-gallon)", "sku": null, "model": "Onyx (VAL CONCRETE)", "qty": 1, "price": 45.98, "status": "RECEIVED" },
+        { "project": "Garage", "category": "Wall Paint",   "item": "4000 Eggshell Pastel Tintable Interior Paint (1-gallon)", "sku": "447515", "model": "007.9447515.007", "qty": 1, "price": 22.98, "status": "RECEIVED" },
+        { "project": "Garage", "category": "Floor Sealer", "item": "Clear Satin Transparent Acrylic Interior/Exterior Sealer (1-gallon)", "sku": "86421", "model": "BC1", "qty": 1, "price": 29.98, "status": "RECEIVED" }
+      ]
+    },
+    {
+      "txn": "291787859", "date": "2026-04-11", "store": "Lowe's — Fultondale",
+      "items": [
+        { "project": "Garage", "category": "Wall Paint", "item": "4000 Eggshell Pastel Tintable Interior Paint (1-gallon)", "sku": "447515", "model": "007.9447515.007", "qty": 1, "price": 22.98, "status": "RECEIVED" }
+      ]
+    },
+    {
+      "txn": "874291367", "date": "2026-04-08", "store": "Lowe's — Fultondale",
+      "items": [
+        { "project": "Garage",         "category": "Wall Primer",  "item": "Pro Interior PVA Wall & Ceiling Primer (5-gallon)", "sku": "305013", "model": "007.0305013.008", "qty": 1, "price": 68.00, "status": "RECEIVED" },
+        { "project": "Basement Floor", "category": "Prep",         "item": "Interior/Exterior Etcher (1-gallon)", "sku": "6029311", "model": "GKCE760", "qty": 1, "price": 21.98, "status": "RECEIVED" },
+        { "project": "Basement Paint", "category": "Prep",         "item": "12-ft x 400-ft Clear 0.5-mil Light-Duty Plastic Sheeting", "sku": "3487103", "model": "110SG12400LOWES.5C", "qty": 1, "price": 29.98, "status": "RECEIVED" }
+      ]
+    }
+  ]
+}

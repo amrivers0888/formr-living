@@ -31,28 +31,31 @@ export function HeroImage({ cover, projectId }: { cover: string | null; projectI
   }
 
   return (
-    <>
+    <div className="relative flex w-full items-center justify-center">
       {src ? (
         // eslint-disable-next-line @next/next/no-img-element
-        <img src={src} alt="" className="h-full w-full object-cover" />
+        <img src={src} alt="" className="block max-h-[36rem] w-auto max-w-full object-contain" />
       ) : (
-        <div className="h-full w-full bg-gradient-to-br from-[var(--color-accent-soft)] to-[var(--color-bg-soft)]" />
+        <div className="flex aspect-[4/3] w-full items-center justify-center">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/brand/formr-house-tight.png" alt="" className="h-[55%] w-auto opacity-40" />
+        </div>
       )}
 
       <button
         onClick={generate}
         disabled={busy}
-        className="absolute right-4 top-4 z-20 flex items-center gap-1.5 rounded-full bg-white/90 px-3 py-1.5 text-sm font-medium text-[var(--color-text)] shadow backdrop-blur transition hover:bg-white disabled:opacity-70"
+        className="absolute right-3 top-3 z-20 flex items-center gap-1.5 rounded-full bg-white/90 px-3 py-1.5 text-xs font-medium text-[var(--color-text)] shadow backdrop-blur transition hover:bg-white disabled:opacity-70"
       >
-        {busy ? <Loader2 className="h-4 w-4 animate-spin" /> : <Wand2 className="h-4 w-4 text-[var(--color-accent-strong)]" />}
-        {busy ? "Rendering…" : src ? "Regenerate mockup" : "Generate mockup"}
+        {busy ? <Loader2 className="h-3.5 w-3.5 animate-spin" /> : <Wand2 className="h-3.5 w-3.5 text-[var(--color-terra-deep)]" />}
+        {busy ? "Rendering…" : src ? "Regenerate" : "Generate mockup"}
       </button>
 
       {note && (
-        <div className="absolute right-4 top-14 z-20 max-w-xs rounded-lg bg-black/70 px-3 py-1.5 text-xs text-white">
+        <div className="absolute right-3 top-12 z-20 max-w-xs rounded-lg bg-black/70 px-3 py-1.5 text-xs text-white">
           {note}
         </div>
       )}
-    </>
+    </div>
   );
 }
